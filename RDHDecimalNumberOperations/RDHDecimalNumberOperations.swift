@@ -177,6 +177,19 @@ public extension NSDecimalNumber {
         return self == NSDecimalNumber.notANumber()
     }
     
+    public func abs() -> NSDecimalNumber {
+        
+        if (self.isNaN()) {
+            return NSDecimalNumber.notANumber()
+        }
+        
+        if (self >= NSDecimalNumber.zero()) {
+            return self
+        } else {
+            return -self
+        }
+    }
+    
     /// @returns the square root of the decimal number, or nil if value was negative
     private func sqrt() -> NSDecimalNumber? {
         
