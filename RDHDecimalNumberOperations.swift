@@ -137,16 +137,6 @@ public func **= (inout left: NSDecimalNumber, right: Int) {
     left = left ** right
 }
 
-/// Power
-public func ^ (left: NSDecimalNumber, right: Int) -> NSDecimalNumber {
-    return left ** right
-}
-
-/// 2 ^= 2 will return 4
-public func ^= (inout left: NSDecimalNumber, right: Int) {
-    left = left ^ right
-}
-
 
 // MARK: - Other
 
