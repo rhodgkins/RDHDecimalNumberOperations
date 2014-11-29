@@ -204,16 +204,13 @@ public extension NSDecimalNumber {
         
         struct Lazily {
             static let half = NSDecimalNumber(mantissa: 2, exponent: -1, isNegative: false)
-            
-            /// Ignore dividing by 0 errors
-            static let dividingHandler = NSDecimalNumberHandler(roundingMode: NSDecimalNumberHandler.defaultDecimalNumberHandler().roundingMode(), scale: NSDecimalNumberHandler.defaultDecimalNumberHandler().scale(), raiseOnExactness: true, raiseOnOverflow: true, raiseOnUnderflow: true, raiseOnDivideByZero: false);
         }
         
         var guess = (self + NSDecimalNumber.one()) * Lazily.half
         
         for _ in 1...6 {
-            let divisionResult = self.decimalNumberByDividingBy(guess, withBehavior: Lazily.dividingHandler)
-            guess = (divisionResult + guess) * Lazily.half
+            // Use overflow division
+            guess = ((self &/ guess) + guess) * Lazily.half
         }
         
         return guess
