@@ -33,7 +33,7 @@ class AdditionTests: XCTestCase {
     
     func testNegativeNumbers() {
         
-        XCTAssertEqual(NSDecimalNumber.minusOne() + NSDecimalNumber.minusOne(), NSDecimalNumber.minusOne().decimalNumberByAdding(NSDecimalNumber.minusOne()), "Incorrect")
+        XCTAssertEqual(NSDecimalNumber.minusOne + NSDecimalNumber.minusOne, NSDecimalNumber.minusOne.decimalNumberByAdding(NSDecimalNumber.minusOne), "Incorrect")
         
         let leftNumber = NSDecimalNumber(string: "-8")
         let rightNumber = NSDecimalNumber(string: "-7.9")
@@ -47,7 +47,7 @@ class AdditionTests: XCTestCase {
     
     func testPostiveToNegativeNumbers() {
         
-        XCTAssertEqual(NSDecimalNumber.one() + NSDecimalNumber.minusOne(), NSDecimalNumber.one().decimalNumberByAdding(NSDecimalNumber.minusOne()), "Incorrect")
+        XCTAssertEqual(NSDecimalNumber.one() + NSDecimalNumber.minusOne, NSDecimalNumber.one().decimalNumberByAdding(NSDecimalNumber.minusOne), "Incorrect")
         
         let leftNumber = NSDecimalNumber(string: "12")
         let rightNumber = NSDecimalNumber(string: "-90.1")
@@ -59,7 +59,7 @@ class AdditionTests: XCTestCase {
     
     func testNegativeToPostiveNumbers() {
         
-        XCTAssertEqual(NSDecimalNumber.minusOne() + NSDecimalNumber.one(), NSDecimalNumber.minusOne().decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
+        XCTAssertEqual(NSDecimalNumber.minusOne + NSDecimalNumber.one(), NSDecimalNumber.minusOne.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         
         let leftNumber = NSDecimalNumber(string: "-12122.32")
         let rightNumber = NSDecimalNumber(string: "23")

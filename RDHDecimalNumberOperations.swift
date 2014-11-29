@@ -64,7 +64,7 @@ public postfix func ++ (inout value: NSDecimalNumber) -> NSDecimalNumber {
 // MARK: - Subtraction
 
 public prefix func - (value: NSDecimalNumber) -> NSDecimalNumber {
-    return value * NSDecimalNumber.minusOne()
+    return value * NSDecimalNumber.minusOne
 }
 
 public func - (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
@@ -166,7 +166,8 @@ private prefix func √ (inout value: NSDecimalNumber?) {
 
 public extension NSDecimalNumber {
     
-    public class func minusOne() -> NSDecimalNumber {
+    /// -1
+    public class var minusOne: NSDecimalNumber {
         struct Lazily {
             static let minusOne = NSDecimalNumber.zero() - NSDecimalNumber.one()
         }

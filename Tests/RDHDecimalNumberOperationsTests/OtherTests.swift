@@ -14,7 +14,7 @@ import RDHDecimalNumberOperations
 class OtherTests: XCTestCase {
     
     func testMinusOne() {
-        XCTAssertEqual(NSDecimalNumber.minusOne(), NSDecimalNumber(string: "-1"), "Not minus one")
+        XCTAssertEqual(NSDecimalNumber.minusOne, NSDecimalNumber(string: "-1"), "Not minus one")
     }
     
     func testNaN() {
@@ -39,7 +39,7 @@ class OtherTests: XCTestCase {
         
         let value = NSDecimalNumber(mantissa: mantinssa, exponent: exponent, isNegative: negative)
         
-        XCTAssertEqual(value.abs(), value.decimalNumberByMultiplyingBy(NSDecimalNumber.minusOne()), "Incorrect")
+        XCTAssertEqual(value.abs(), value.decimalNumberByMultiplyingBy(NSDecimalNumber.minusOne), "Incorrect")
     }
     
     func testAbsWithZero() {
@@ -78,8 +78,8 @@ class OtherTests: XCTestCase {
     
     func testSquartRootOfNegativeNumber() {
         
-        XCTAssertNil(NSDecimalNumber.minusOne().sqrt(), "Incorrect")
-        XCTAssertNil(√NSDecimalNumber.minusOne(), "Incorrect")
+        XCTAssertNil(NSDecimalNumber.minusOne.sqrt(), "Incorrect")
+        XCTAssertNil(√NSDecimalNumber.minusOne, "Incorrect")
     }
     
     func testSquartRootOfNaN() {

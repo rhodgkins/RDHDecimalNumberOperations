@@ -48,8 +48,8 @@ class PowerTests: XCTestCase {
         XCTAssertEqual(number ** power, number.decimalNumberByRaisingToPower(power), "Incorrect")
         XCTAssertEqual(number ^ power, number.decimalNumberByRaisingToPower(power), "Incorrect")
         
-        XCTAssertEqual(NSDecimalNumber.minusOne() ** -1, NSDecimalNumber.minusOne().decimalNumberByRaisingToPower(-1), "Incorrect")
-        XCTAssertEqual(NSDecimalNumber.minusOne() ^ -1, NSDecimalNumber.minusOne().decimalNumberByRaisingToPower(-1), "Incorrect")
+        XCTAssertEqual(NSDecimalNumber.minusOne ** -1, NSDecimalNumber.minusOne.decimalNumberByRaisingToPower(-1), "Incorrect")
+        XCTAssertEqual(NSDecimalNumber.minusOne ^ -1, NSDecimalNumber.minusOne.decimalNumberByRaisingToPower(-1), "Incorrect")
     }
     
     // MARK: - Assignment
@@ -91,13 +91,13 @@ class PowerTests: XCTestCase {
         XCTAssertEqual(result2, number.decimalNumberByRaisingToPower(power), "Incorrect")
         XCTAssertEqual(result1, result2, "Incorrect")
         
-        result1 = NSDecimalNumber.minusOne()
-        result2 = NSDecimalNumber.minusOne()
+        result1 = NSDecimalNumber.minusOne
+        result2 = NSDecimalNumber.minusOne
         result1 **= -1
         result2 ^= -1
         
-        XCTAssertEqual(result1, NSDecimalNumber.minusOne().decimalNumberByRaisingToPower(-1), "Incorrect")
-        XCTAssertEqual(result2, NSDecimalNumber.minusOne().decimalNumberByRaisingToPower(-1), "Incorrect")
+        XCTAssertEqual(result1, NSDecimalNumber.minusOne.decimalNumberByRaisingToPower(-1), "Incorrect")
+        XCTAssertEqual(result2, NSDecimalNumber.minusOne.decimalNumberByRaisingToPower(-1), "Incorrect")
         XCTAssertEqual(result1, result2, "Incorrect")
     }
 }

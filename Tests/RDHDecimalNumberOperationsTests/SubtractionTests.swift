@@ -33,7 +33,7 @@ class SubtractionTests: XCTestCase {
     
     func testNegativeNumbers() {
         
-        XCTAssertEqual(NSDecimalNumber.minusOne() - NSDecimalNumber.minusOne(), NSDecimalNumber.minusOne().decimalNumberBySubtracting(NSDecimalNumber.minusOne()), "Incorrect")
+        XCTAssertEqual(NSDecimalNumber.minusOne - NSDecimalNumber.minusOne, NSDecimalNumber.minusOne.decimalNumberBySubtracting(NSDecimalNumber.minusOne), "Incorrect")
         
         let leftNumber = NSDecimalNumber(string: "-8")
         let rightNumber = NSDecimalNumber(string: "-7.9")
@@ -47,7 +47,7 @@ class SubtractionTests: XCTestCase {
     
     func testPostiveToNegativeNumbers() {
         
-        XCTAssertEqual(NSDecimalNumber.one() - NSDecimalNumber.minusOne(), NSDecimalNumber.one().decimalNumberBySubtracting(NSDecimalNumber.minusOne()), "Incorrect")
+        XCTAssertEqual(NSDecimalNumber.one() - NSDecimalNumber.minusOne, NSDecimalNumber.one().decimalNumberBySubtracting(NSDecimalNumber.minusOne), "Incorrect")
         
         let leftNumber = NSDecimalNumber(string: "12")
         let rightNumber = NSDecimalNumber(string: "-90.1")
@@ -59,7 +59,7 @@ class SubtractionTests: XCTestCase {
     
     func testNegativeToPostiveNumbers() {
         
-        XCTAssertEqual(NSDecimalNumber.minusOne() - NSDecimalNumber.one(), NSDecimalNumber.minusOne().decimalNumberBySubtracting(NSDecimalNumber.one()), "Incorrect")
+        XCTAssertEqual(NSDecimalNumber.minusOne - NSDecimalNumber.one(), NSDecimalNumber.minusOne.decimalNumberBySubtracting(NSDecimalNumber.one()), "Incorrect")
         
         let leftNumber = NSDecimalNumber(string: "-12122.32")
         let rightNumber = NSDecimalNumber(string: "23")
@@ -184,7 +184,7 @@ class SubtractionTests: XCTestCase {
         let value = NSDecimalNumber(string: "9351.3214")
         let negatedValue = -value
         
-        XCTAssertEqual(negatedValue, value.decimalNumberByMultiplyingBy(NSDecimalNumber.minusOne()), "Incorrect")
+        XCTAssertEqual(negatedValue, value.decimalNumberByMultiplyingBy(NSDecimalNumber.minusOne), "Incorrect")
     }
     
     func testNegationWithNegativeNumbers() {
@@ -192,7 +192,7 @@ class SubtractionTests: XCTestCase {
         let value = NSDecimalNumber(string: "-234.0234")
         let negatedValue = -value
         
-        XCTAssertEqual(negatedValue, value.decimalNumberByMultiplyingBy(NSDecimalNumber.minusOne()), "Incorrect")
+        XCTAssertEqual(negatedValue, value.decimalNumberByMultiplyingBy(NSDecimalNumber.minusOne), "Incorrect")
     }
     
     func testNegationWithZero() {
@@ -201,6 +201,6 @@ class SubtractionTests: XCTestCase {
         let negatedValue = -value
         
         XCTAssertEqual(negatedValue, value, "Incorrect")
-        XCTAssertEqual(negatedValue, value.decimalNumberByMultiplyingBy(NSDecimalNumber.minusOne()), "Incorrect")
+        XCTAssertEqual(negatedValue, value.decimalNumberByMultiplyingBy(NSDecimalNumber.minusOne), "Incorrect")
     }
 }
