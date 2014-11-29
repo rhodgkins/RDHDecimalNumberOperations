@@ -15,7 +15,7 @@ class AdditionTests: XCTestCase {
     
     // MARK: - Infix
     
-    func testAddingPositiveNumbers() {
+    func testPositiveNumbers() {
         
         XCTAssertEqual(NSDecimalNumber.one() + NSDecimalNumber.one(), NSDecimalNumber.one().decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         
@@ -31,7 +31,7 @@ class AdditionTests: XCTestCase {
         XCTAssertEqual(NSDecimalNumber.zero() + NSDecimalNumber.zero(), NSDecimalNumber.zero(), "Should be zero")
     }
     
-    func testAddingNegativeNumbers() {
+    func testNegativeNumbers() {
         
         XCTAssertEqual(NSDecimalNumber.minusOne() + NSDecimalNumber.minusOne(), NSDecimalNumber.minusOne().decimalNumberByAdding(NSDecimalNumber.minusOne()), "Incorrect")
         
@@ -45,7 +45,7 @@ class AdditionTests: XCTestCase {
         XCTAssertEqual(leftPositiveNumber + NSDecimalNumber.zero(), leftPositiveNumber, "Should not change")
     }
     
-    func testAddingPostiveToNegativeNumbers() {
+    func testPostiveToNegativeNumbers() {
         
         XCTAssertEqual(NSDecimalNumber.one() + NSDecimalNumber.minusOne(), NSDecimalNumber.one().decimalNumberByAdding(NSDecimalNumber.minusOne()), "Incorrect")
         
@@ -57,7 +57,7 @@ class AdditionTests: XCTestCase {
         XCTAssertEqual(rightPositiveNumber + leftPositiveNumber, rightPositiveNumber.decimalNumberByAdding(leftPositiveNumber), "Incorrect")
     }
     
-    func testAddingNegativeToPostiveNumbers() {
+    func testNegativeToPostiveNumbers() {
         
         XCTAssertEqual(NSDecimalNumber.minusOne() + NSDecimalNumber.one(), NSDecimalNumber.minusOne().decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         
@@ -71,7 +71,7 @@ class AdditionTests: XCTestCase {
     
     // MARK: - Assignment
     
-    func testAssignedAdditionPositiveNumbers() {
+    func testAssignmentWithPositiveNumbers() {
         
         let leftPositiveNumber = NSDecimalNumber(string: "4")
         let rightPositiveNumber = NSDecimalNumber(string: "6.5")
@@ -85,7 +85,7 @@ class AdditionTests: XCTestCase {
         XCTAssertEqual(result, result, "Should not change")
     }
     
-    func testAssignedAdditionNegativeNumbers() {
+    func testAssignmentWithNegativeNumbers() {
         
         let leftPositiveNumber = NSDecimalNumber(string: "-8")
         let rightPositiveNumber = NSDecimalNumber(string: "-7.9")
@@ -99,7 +99,7 @@ class AdditionTests: XCTestCase {
         XCTAssertEqual(result, result, "Should not change")
     }
     
-    func testAssignedAdditionPostiveToNegativeNumbers() {
+    func testAssignmentWithPostiveToNegativeNumbers() {
         
         let leftPositiveNumber = NSDecimalNumber(string: "12")
         let rightPositiveNumber = NSDecimalNumber(string: "-90.1")
@@ -113,7 +113,7 @@ class AdditionTests: XCTestCase {
         XCTAssertEqual(result, result, "Should not change")
     }
     
-    func testAssignedAdditionNegativeToPostiveNumbers() {
+    func testAssignmentWithNegativeToPostiveNumbers() {
         
         let leftPositiveNumber = NSDecimalNumber(string: "-12122.32")
         let rightPositiveNumber = NSDecimalNumber(string: "23")
@@ -129,7 +129,7 @@ class AdditionTests: XCTestCase {
     
     // MARK: - Prefix
     
-    func testPrefixIncrementWithPositiveNumbers() {
+    func testPrefixWithPositiveNumbers() {
         
         let value = NSDecimalNumber(string: "34")
         var incrementing = value
@@ -140,7 +140,7 @@ class AdditionTests: XCTestCase {
         XCTAssertEqual(result, incrementing, "Incorrect")
     }
     
-    func testPrefixIncrementWithNegativeNumbers() {
+    func testPrefixWithNegativeNumbers() {
         
         let value = NSDecimalNumber(string: "-383")
         var incrementing = value
@@ -153,7 +153,7 @@ class AdditionTests: XCTestCase {
     
     // MARK: - Suffix
     
-    func testSuffixIncrementWithPositiveNumbers() {
+    func testSuffixWithPositiveNumbers() {
         
         let value = NSDecimalNumber(string: "234")
         var incrementing = value
@@ -165,7 +165,7 @@ class AdditionTests: XCTestCase {
         XCTAssertEqual(result.decimalNumberByAdding(NSDecimalNumber.one()), incrementing, "Incorrect")
     }
     
-    func testSuffixIncrementWithNegativeNumbers() {
+    func testSuffixWithNegativeNumbers() {
         
         let value = NSDecimalNumber(string: "-4358")
         var incrementing = value
