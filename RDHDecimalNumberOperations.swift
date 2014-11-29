@@ -60,6 +60,12 @@ public postfix func ++ (inout value: NSDecimalNumber) -> NSDecimalNumber {
     return result
 }
 
+// MARK: Overflow
+
+public func &+ (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
+    return left.decimalNumberByAdding(right, withBehavior: NSDecimalNumberHandler.lenientHandler)
+}
+
 
 // MARK: - Subtraction
 
@@ -86,6 +92,12 @@ public postfix func -- (inout value: NSDecimalNumber) -> NSDecimalNumber {
     return result
 }
 
+// MARK: Overflow
+
+public func &- (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
+    return left.decimalNumberBySubtracting(right, withBehavior: NSDecimalNumberHandler.lenientHandler)
+}
+
 
 // MARK: - Multiplication
 
@@ -97,10 +109,17 @@ public func *= (inout left: NSDecimalNumber, right: NSDecimalNumber) {
     left = left * right
 }
 
-infix operator × {}
+/// Match the * operator
+infix operator × { associativity left precedence 150 }
 
 public func × (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
     return left * right
+}
+
+// MARK: Overflow
+
+public func &* (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
+    return left.decimalNumberByMultiplyingBy(right, withBehavior: NSDecimalNumberHandler.lenientHandler)
 }
 
 
@@ -114,10 +133,17 @@ public func /= (inout left: NSDecimalNumber, right: NSDecimalNumber) {
     left = left / right
 }
 
-infix operator ÷ {}
+/// Match the / operator
+infix operator ÷ { associativity left precedence 150 }
 
 public func ÷ (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
     return left / right
+}
+
+// MARK: Overflow
+
+public func &/ (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
+    return left.decimalNumberByDividingBy(right, withBehavior: NSDecimalNumberHandler.lenientHandler)
 }
 
 
@@ -153,6 +179,16 @@ private prefix func √ (value: NSDecimalNumber) -> NSDecimalNumber? {
 private prefix func √ (inout value: NSDecimalNumber?) {
     if let v = value {
         value = √v
+    }
+}
+
+private extension NSDecimalNumberHandler {
+    
+    class var lenientHandler: NSDecimalNumberHandler {
+        struct Lazily {
+            static let handler = NSDecimalNumberHandler(roundingMode: NSDecimalNumberHandler.defaultDecimalNumberHandler().roundingMode(), scale: NSDecimalNumberHandler.defaultDecimalNumberHandler().scale(), raiseOnExactness: true, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false);
+        }
+        return Lazily.handler
     }
 }
 
