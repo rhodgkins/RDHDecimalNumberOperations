@@ -12,6 +12,7 @@
 		449C7F061A29EF0B009ED081 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 449C7F051A29EF0B009ED081 /* .travis.yml */; };
 		449C7F081A29EF3D009ED081 /* RDHDecimalNumberOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449C7F071A29EF3D009ED081 /* RDHDecimalNumberOperations.swift */; };
 		449C7F0A1A29F992009ED081 /* MultiplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449C7F091A29F992009ED081 /* MultiplicationTests.swift */; };
+		449C7F0C1A29FE37009ED081 /* DivisionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449C7F0B1A29FE37009ED081 /* DivisionTests.swift */; };
 		44C5E42E1A291260008A259C /* RDHDecimalNumberOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = 44C5E42D1A291260008A259C /* RDHDecimalNumberOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44C5E4341A291260008A259C /* RDHDecimalNumberOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C5E4281A291260008A259C /* RDHDecimalNumberOperations.framework */; };
 		44C5E43B1A291260008A259C /* OtherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C5E43A1A291260008A259C /* OtherTests.swift */; };
@@ -35,6 +36,7 @@
 		449C7F051A29EF0B009ED081 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
 		449C7F071A29EF3D009ED081 /* RDHDecimalNumberOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RDHDecimalNumberOperations.swift; path = ../../RDHDecimalNumberOperations.swift; sourceTree = "<group>"; };
 		449C7F091A29F992009ED081 /* MultiplicationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiplicationTests.swift; sourceTree = "<group>"; };
+		449C7F0B1A29FE37009ED081 /* DivisionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DivisionTests.swift; sourceTree = "<group>"; };
 		44C5E4281A291260008A259C /* RDHDecimalNumberOperations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RDHDecimalNumberOperations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C5E42C1A291260008A259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44C5E42D1A291260008A259C /* RDHDecimalNumberOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDHDecimalNumberOperations.h; sourceTree = "<group>"; };
@@ -107,6 +109,7 @@
 				4489FA981A29DDEE003CBD6F /* AdditionTests.swift */,
 				4489FA9A1A29DE2D003CBD6F /* SubtractionTests.swift */,
 				449C7F091A29F992009ED081 /* MultiplicationTests.swift */,
+				449C7F0B1A29FE37009ED081 /* DivisionTests.swift */,
 				44C5E43A1A291260008A259C /* OtherTests.swift */,
 				44C5E4381A291260008A259C /* Supporting Files */,
 			);
@@ -241,6 +244,7 @@
 				449C7F0A1A29F992009ED081 /* MultiplicationTests.swift in Sources */,
 				44C5E43B1A291260008A259C /* OtherTests.swift in Sources */,
 				4489FA991A29DDEE003CBD6F /* AdditionTests.swift in Sources */,
+				449C7F0C1A29FE37009ED081 /* DivisionTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
