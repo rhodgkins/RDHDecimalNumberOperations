@@ -173,7 +173,11 @@ public extension NSDecimalNumber {
     /// @returns the square root of the decimal number, or nil if value was negative
     public func sqrt() -> NSDecimalNumber? {
         
-        if (self < NSDecimalNumber.zero() || self.isNaN()) {
+        if (self.isNaN()) {
+            return NSDecimalNumber.notANumber()
+        }
+        
+        if (self < NSDecimalNumber.zero()) {
             return nil
         }
         
