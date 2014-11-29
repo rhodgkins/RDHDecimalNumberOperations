@@ -19,14 +19,14 @@ class SubtractionTests: XCTestCase {
         
         XCTAssertEqual(NSDecimalNumber.one() - NSDecimalNumber.one(), NSDecimalNumber.one().decimalNumberBySubtracting(NSDecimalNumber.one()), "Incorrect")
         
-        let leftPositiveNumber = NSDecimalNumber(string: "4")
-        let rightPositiveNumber = NSDecimalNumber(string: "6.5")
+        let leftNumber = NSDecimalNumber(string: "4")
+        let rightNumber = NSDecimalNumber(string: "6.5")
         
-        XCTAssertEqual(leftPositiveNumber - rightPositiveNumber, leftPositiveNumber.decimalNumberBySubtracting(rightPositiveNumber), "Incorrect")
+        XCTAssertEqual(leftNumber - rightNumber, leftNumber.decimalNumberBySubtracting(rightNumber), "Incorrect")
         // Associativity
-        XCTAssertEqual(rightPositiveNumber - leftPositiveNumber, rightPositiveNumber.decimalNumberBySubtracting(leftPositiveNumber), "Incorrect")
+        XCTAssertEqual(rightNumber - leftNumber, rightNumber.decimalNumberBySubtracting(leftNumber), "Incorrect")
         
-        XCTAssertEqual(leftPositiveNumber - NSDecimalNumber.zero(), leftPositiveNumber, "Should not change")
+        XCTAssertEqual(leftNumber - NSDecimalNumber.zero(), leftNumber, "Should not change")
         
         XCTAssertEqual(NSDecimalNumber.zero() - NSDecimalNumber.zero(), NSDecimalNumber.zero(), "Should be zero")
     }
@@ -35,51 +35,51 @@ class SubtractionTests: XCTestCase {
         
         XCTAssertEqual(NSDecimalNumber.minusOne() - NSDecimalNumber.minusOne(), NSDecimalNumber.minusOne().decimalNumberBySubtracting(NSDecimalNumber.minusOne()), "Incorrect")
         
-        let leftPositiveNumber = NSDecimalNumber(string: "-8")
-        let rightPositiveNumber = NSDecimalNumber(string: "-7.9")
+        let leftNumber = NSDecimalNumber(string: "-8")
+        let rightNumber = NSDecimalNumber(string: "-7.9")
         
-        XCTAssertEqual(leftPositiveNumber - rightPositiveNumber, leftPositiveNumber.decimalNumberBySubtracting(rightPositiveNumber), "Incorrect")
+        XCTAssertEqual(leftNumber - rightNumber, leftNumber.decimalNumberBySubtracting(rightNumber), "Incorrect")
         // Associativity
-        XCTAssertEqual(rightPositiveNumber - leftPositiveNumber, rightPositiveNumber.decimalNumberBySubtracting(leftPositiveNumber), "Incorrect")
+        XCTAssertEqual(rightNumber - leftNumber, rightNumber.decimalNumberBySubtracting(leftNumber), "Incorrect")
         
-        XCTAssertEqual(leftPositiveNumber - NSDecimalNumber.zero(), leftPositiveNumber, "Should not change")
+        XCTAssertEqual(leftNumber - NSDecimalNumber.zero(), leftNumber, "Should not change")
     }
     
     func testPostiveToNegativeNumbers() {
         
         XCTAssertEqual(NSDecimalNumber.one() - NSDecimalNumber.minusOne(), NSDecimalNumber.one().decimalNumberBySubtracting(NSDecimalNumber.minusOne()), "Incorrect")
         
-        let leftPositiveNumber = NSDecimalNumber(string: "12")
-        let rightPositiveNumber = NSDecimalNumber(string: "-90.1")
+        let leftNumber = NSDecimalNumber(string: "12")
+        let rightNumber = NSDecimalNumber(string: "-90.1")
         
-        XCTAssertEqual(leftPositiveNumber - rightPositiveNumber, leftPositiveNumber.decimalNumberBySubtracting(rightPositiveNumber), "Incorrect")
+        XCTAssertEqual(leftNumber - rightNumber, leftNumber.decimalNumberBySubtracting(rightNumber), "Incorrect")
         // Associativity
-        XCTAssertEqual(rightPositiveNumber - leftPositiveNumber, rightPositiveNumber.decimalNumberBySubtracting(leftPositiveNumber), "Incorrect")
+        XCTAssertEqual(rightNumber - leftNumber, rightNumber.decimalNumberBySubtracting(leftNumber), "Incorrect")
     }
     
     func testNegativeToPostiveNumbers() {
         
         XCTAssertEqual(NSDecimalNumber.minusOne() - NSDecimalNumber.one(), NSDecimalNumber.minusOne().decimalNumberBySubtracting(NSDecimalNumber.one()), "Incorrect")
         
-        let leftPositiveNumber = NSDecimalNumber(string: "-12122.32")
-        let rightPositiveNumber = NSDecimalNumber(string: "23")
+        let leftNumber = NSDecimalNumber(string: "-12122.32")
+        let rightNumber = NSDecimalNumber(string: "23")
         
-        XCTAssertEqual(leftPositiveNumber - rightPositiveNumber, leftPositiveNumber.decimalNumberBySubtracting(rightPositiveNumber), "Incorrect")
+        XCTAssertEqual(leftNumber - rightNumber, leftNumber.decimalNumberBySubtracting(rightNumber), "Incorrect")
         // Associativity
-        XCTAssertEqual(rightPositiveNumber - leftPositiveNumber, rightPositiveNumber.decimalNumberBySubtracting(leftPositiveNumber), "Incorrect")
+        XCTAssertEqual(rightNumber - leftNumber, rightNumber.decimalNumberBySubtracting(leftNumber), "Incorrect")
     }
     
     // MARK: - Assignment
     
     func testAssignmentWithPositiveNumbers() {
         
-        let leftPositiveNumber = NSDecimalNumber(string: "4")
-        let rightPositiveNumber = NSDecimalNumber(string: "6.5")
+        let leftNumber = NSDecimalNumber(string: "4")
+        let rightNumber = NSDecimalNumber(string: "6.5")
         
-        var result = leftPositiveNumber
+        var result = leftNumber
         
-        result -= rightPositiveNumber
-        XCTAssertEqual(result, leftPositiveNumber.decimalNumberBySubtracting(rightPositiveNumber), "Incorrect")
+        result -= rightNumber
+        XCTAssertEqual(result, leftNumber.decimalNumberBySubtracting(rightNumber), "Incorrect")
         
         result -= NSDecimalNumber.zero()
         XCTAssertEqual(result, result, "Should not change")
@@ -87,13 +87,13 @@ class SubtractionTests: XCTestCase {
     
     func testAssignmentWithNegativeNumbers() {
         
-        let leftPositiveNumber = NSDecimalNumber(string: "-8")
-        let rightPositiveNumber = NSDecimalNumber(string: "-7.9")
+        let leftNumber = NSDecimalNumber(string: "-8")
+        let rightNumber = NSDecimalNumber(string: "-7.9")
         
-        var result = leftPositiveNumber
+        var result = leftNumber
         
-        result -= rightPositiveNumber
-        XCTAssertEqual(result, leftPositiveNumber.decimalNumberBySubtracting(rightPositiveNumber), "Incorrect")
+        result -= rightNumber
+        XCTAssertEqual(result, leftNumber.decimalNumberBySubtracting(rightNumber), "Incorrect")
         
         result -= NSDecimalNumber.zero()
         XCTAssertEqual(result, result, "Should not change")
@@ -101,13 +101,13 @@ class SubtractionTests: XCTestCase {
     
     func testAssignmentWithPostiveToNegativeNumbers() {
         
-        let leftPositiveNumber = NSDecimalNumber(string: "12")
-        let rightPositiveNumber = NSDecimalNumber(string: "-90.1")
+        let leftNumber = NSDecimalNumber(string: "12")
+        let rightNumber = NSDecimalNumber(string: "-90.1")
         
-        var result = leftPositiveNumber
+        var result = leftNumber
         
-        result -= rightPositiveNumber
-        XCTAssertEqual(result, leftPositiveNumber.decimalNumberBySubtracting(rightPositiveNumber), "Incorrect")
+        result -= rightNumber
+        XCTAssertEqual(result, leftNumber.decimalNumberBySubtracting(rightNumber), "Incorrect")
         
         result -= NSDecimalNumber.zero()
         XCTAssertEqual(result, result, "Should not change")
@@ -115,13 +115,13 @@ class SubtractionTests: XCTestCase {
     
     func testAssignmentWithNegativeToPostiveNumbers() {
         
-        let leftPositiveNumber = NSDecimalNumber(string: "-12122.32")
-        let rightPositiveNumber = NSDecimalNumber(string: "23")
+        let leftNumber = NSDecimalNumber(string: "-12122.32")
+        let rightNumber = NSDecimalNumber(string: "23")
         
-        var result = leftPositiveNumber
+        var result = leftNumber
         
-        result -= rightPositiveNumber
-        XCTAssertEqual(result, leftPositiveNumber.decimalNumberBySubtracting(rightPositiveNumber), "Incorrect")
+        result -= rightNumber
+        XCTAssertEqual(result, leftNumber.decimalNumberBySubtracting(rightNumber), "Incorrect")
         
         result -= NSDecimalNumber.zero()
         XCTAssertEqual(result, result, "Should not change")

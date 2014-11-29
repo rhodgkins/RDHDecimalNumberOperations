@@ -19,14 +19,14 @@ class AdditionTests: XCTestCase {
         
         XCTAssertEqual(NSDecimalNumber.one() + NSDecimalNumber.one(), NSDecimalNumber.one().decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         
-        let leftPositiveNumber = NSDecimalNumber(string: "4")
-        let rightPositiveNumber = NSDecimalNumber(string: "6.5")
+        let leftNumber = NSDecimalNumber(string: "4")
+        let rightNumber = NSDecimalNumber(string: "6.5")
         
-        XCTAssertEqual(leftPositiveNumber + rightPositiveNumber, leftPositiveNumber.decimalNumberByAdding(rightPositiveNumber), "Incorrect")
+        XCTAssertEqual(leftNumber + rightNumber, leftNumber.decimalNumberByAdding(rightNumber), "Incorrect")
         // Associativity
-        XCTAssertEqual(rightPositiveNumber + leftPositiveNumber, rightPositiveNumber.decimalNumberByAdding(leftPositiveNumber), "Incorrect")
+        XCTAssertEqual(rightNumber + leftNumber, rightNumber.decimalNumberByAdding(leftNumber), "Incorrect")
         
-        XCTAssertEqual(leftPositiveNumber + NSDecimalNumber.zero(), leftPositiveNumber, "Should not change")
+        XCTAssertEqual(leftNumber + NSDecimalNumber.zero(), leftNumber, "Should not change")
         
         XCTAssertEqual(NSDecimalNumber.zero() + NSDecimalNumber.zero(), NSDecimalNumber.zero(), "Should be zero")
     }
@@ -35,51 +35,51 @@ class AdditionTests: XCTestCase {
         
         XCTAssertEqual(NSDecimalNumber.minusOne() + NSDecimalNumber.minusOne(), NSDecimalNumber.minusOne().decimalNumberByAdding(NSDecimalNumber.minusOne()), "Incorrect")
         
-        let leftPositiveNumber = NSDecimalNumber(string: "-8")
-        let rightPositiveNumber = NSDecimalNumber(string: "-7.9")
+        let leftNumber = NSDecimalNumber(string: "-8")
+        let rightNumber = NSDecimalNumber(string: "-7.9")
         
-        XCTAssertEqual(leftPositiveNumber + rightPositiveNumber, leftPositiveNumber.decimalNumberByAdding(rightPositiveNumber), "Incorrect")
+        XCTAssertEqual(leftNumber + rightNumber, leftNumber.decimalNumberByAdding(rightNumber), "Incorrect")
         // Associativity
-        XCTAssertEqual(rightPositiveNumber + leftPositiveNumber, rightPositiveNumber.decimalNumberByAdding(leftPositiveNumber), "Incorrect")
+        XCTAssertEqual(rightNumber + leftNumber, rightNumber.decimalNumberByAdding(leftNumber), "Incorrect")
         
-        XCTAssertEqual(leftPositiveNumber + NSDecimalNumber.zero(), leftPositiveNumber, "Should not change")
+        XCTAssertEqual(leftNumber + NSDecimalNumber.zero(), leftNumber, "Should not change")
     }
     
     func testPostiveToNegativeNumbers() {
         
         XCTAssertEqual(NSDecimalNumber.one() + NSDecimalNumber.minusOne(), NSDecimalNumber.one().decimalNumberByAdding(NSDecimalNumber.minusOne()), "Incorrect")
         
-        let leftPositiveNumber = NSDecimalNumber(string: "12")
-        let rightPositiveNumber = NSDecimalNumber(string: "-90.1")
+        let leftNumber = NSDecimalNumber(string: "12")
+        let rightNumber = NSDecimalNumber(string: "-90.1")
         
-        XCTAssertEqual(leftPositiveNumber + rightPositiveNumber, leftPositiveNumber.decimalNumberByAdding(rightPositiveNumber), "Incorrect")
+        XCTAssertEqual(leftNumber + rightNumber, leftNumber.decimalNumberByAdding(rightNumber), "Incorrect")
         // Associativity
-        XCTAssertEqual(rightPositiveNumber + leftPositiveNumber, rightPositiveNumber.decimalNumberByAdding(leftPositiveNumber), "Incorrect")
+        XCTAssertEqual(rightNumber + leftNumber, rightNumber.decimalNumberByAdding(leftNumber), "Incorrect")
     }
     
     func testNegativeToPostiveNumbers() {
         
         XCTAssertEqual(NSDecimalNumber.minusOne() + NSDecimalNumber.one(), NSDecimalNumber.minusOne().decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         
-        let leftPositiveNumber = NSDecimalNumber(string: "-12122.32")
-        let rightPositiveNumber = NSDecimalNumber(string: "23")
+        let leftNumber = NSDecimalNumber(string: "-12122.32")
+        let rightNumber = NSDecimalNumber(string: "23")
         
-        XCTAssertEqual(leftPositiveNumber + rightPositiveNumber, leftPositiveNumber.decimalNumberByAdding(rightPositiveNumber), "Incorrect")
+        XCTAssertEqual(leftNumber + rightNumber, leftNumber.decimalNumberByAdding(rightNumber), "Incorrect")
         // Associativity
-        XCTAssertEqual(rightPositiveNumber + leftPositiveNumber, rightPositiveNumber.decimalNumberByAdding(leftPositiveNumber), "Incorrect")
+        XCTAssertEqual(rightNumber + leftNumber, rightNumber.decimalNumberByAdding(leftNumber), "Incorrect")
     }
     
     // MARK: - Assignment
     
     func testAssignmentWithPositiveNumbers() {
         
-        let leftPositiveNumber = NSDecimalNumber(string: "4")
-        let rightPositiveNumber = NSDecimalNumber(string: "6.5")
+        let leftNumber = NSDecimalNumber(string: "4")
+        let rightNumber = NSDecimalNumber(string: "6.5")
         
-        var result = leftPositiveNumber
+        var result = leftNumber
         
-        result += rightPositiveNumber
-        XCTAssertEqual(result, leftPositiveNumber.decimalNumberByAdding(rightPositiveNumber), "Incorrect")
+        result += rightNumber
+        XCTAssertEqual(result, leftNumber.decimalNumberByAdding(rightNumber), "Incorrect")
         
         result += NSDecimalNumber.zero()
         XCTAssertEqual(result, result, "Should not change")
@@ -87,13 +87,13 @@ class AdditionTests: XCTestCase {
     
     func testAssignmentWithNegativeNumbers() {
         
-        let leftPositiveNumber = NSDecimalNumber(string: "-8")
-        let rightPositiveNumber = NSDecimalNumber(string: "-7.9")
+        let leftNumber = NSDecimalNumber(string: "-8")
+        let rightNumber = NSDecimalNumber(string: "-7.9")
         
-        var result = leftPositiveNumber
+        var result = leftNumber
         
-        result += rightPositiveNumber
-        XCTAssertEqual(result, leftPositiveNumber.decimalNumberByAdding(rightPositiveNumber), "Incorrect")
+        result += rightNumber
+        XCTAssertEqual(result, leftNumber.decimalNumberByAdding(rightNumber), "Incorrect")
         
         result += NSDecimalNumber.zero()
         XCTAssertEqual(result, result, "Should not change")
@@ -101,13 +101,13 @@ class AdditionTests: XCTestCase {
     
     func testAssignmentWithPostiveToNegativeNumbers() {
         
-        let leftPositiveNumber = NSDecimalNumber(string: "12")
-        let rightPositiveNumber = NSDecimalNumber(string: "-90.1")
+        let leftNumber = NSDecimalNumber(string: "12")
+        let rightNumber = NSDecimalNumber(string: "-90.1")
         
-        var result = leftPositiveNumber
+        var result = leftNumber
         
-        result += rightPositiveNumber
-        XCTAssertEqual(result, leftPositiveNumber.decimalNumberByAdding(rightPositiveNumber), "Incorrect")
+        result += rightNumber
+        XCTAssertEqual(result, leftNumber.decimalNumberByAdding(rightNumber), "Incorrect")
         
         result += NSDecimalNumber.zero()
         XCTAssertEqual(result, result, "Should not change")
@@ -115,13 +115,13 @@ class AdditionTests: XCTestCase {
     
     func testAssignmentWithNegativeToPostiveNumbers() {
         
-        let leftPositiveNumber = NSDecimalNumber(string: "-12122.32")
-        let rightPositiveNumber = NSDecimalNumber(string: "23")
+        let leftNumber = NSDecimalNumber(string: "-12122.32")
+        let rightNumber = NSDecimalNumber(string: "23")
         
-        var result = leftPositiveNumber
+        var result = leftNumber
         
-        result += rightPositiveNumber
-        XCTAssertEqual(result, leftPositiveNumber.decimalNumberByAdding(rightPositiveNumber), "Incorrect")
+        result += rightNumber
+        XCTAssertEqual(result, leftNumber.decimalNumberByAdding(rightNumber), "Incorrect")
         
         result += NSDecimalNumber.zero()
         XCTAssertEqual(result, result, "Should not change")
