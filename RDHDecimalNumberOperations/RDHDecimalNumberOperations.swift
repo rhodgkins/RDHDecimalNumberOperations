@@ -157,6 +157,13 @@ private prefix func √ (value: NSDecimalNumber) -> NSDecimalNumber? {
     return value.sqrt()
 }
 
+/// @returns the square root of the decimal number, or nil if value was negative
+private prefix func √ (inout value: NSDecimalNumber?) {
+    if let v = value {
+        value = √v
+    }
+}
+
 public extension NSDecimalNumber {
     
     public class func minusOne() -> NSDecimalNumber {
