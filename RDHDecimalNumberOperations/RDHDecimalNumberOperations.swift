@@ -50,14 +50,14 @@ public func += (inout left: NSDecimalNumber, right: NSDecimalNumber) {
 }
 
 public prefix func ++ (inout value: NSDecimalNumber) -> NSDecimalNumber {
-    let result = value
-    value++
-    return result
+    value += NSDecimalNumber.one()
+    return value
 }
 
 public postfix func ++ (inout value: NSDecimalNumber) -> NSDecimalNumber {
-    value += NSDecimalNumber.one()
-    return value
+    let result = value
+    ++value
+    return result
 }
 
 
@@ -76,14 +76,14 @@ public func -= (inout left: NSDecimalNumber, right: NSDecimalNumber) {
 }
 
 public prefix func -- (inout value: NSDecimalNumber) -> NSDecimalNumber {
-    let result = value
-    value--
-    return result
+    value -= NSDecimalNumber.one()
+    return value
 }
 
 public postfix func -- (inout value: NSDecimalNumber) -> NSDecimalNumber {
-    value -= NSDecimalNumber.one()
-    return value
+    let result = value
+    --value
+    return result
 }
 
 
