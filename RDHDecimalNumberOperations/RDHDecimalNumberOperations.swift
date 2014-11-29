@@ -23,7 +23,7 @@ public func > (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
 }
 
 public func >= (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
-    return (left > right) && (left == right)
+    return (left > right) || (left == right)
 }
 
 public func < (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
@@ -31,7 +31,7 @@ public func < (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
 }
 
 public func <= (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
-    return (left < right) && (left == right)
+    return (left < right) || (left == right)
 }
 
 
