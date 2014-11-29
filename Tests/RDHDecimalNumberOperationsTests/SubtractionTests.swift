@@ -203,4 +203,12 @@ class SubtractionTests: XCTestCase {
         XCTAssertEqual(negatedValue, value, "Incorrect")
         XCTAssertEqual(negatedValue, value.decimalNumberByMultiplyingBy(NSDecimalNumber.minusOne), "Incorrect")
     }
+    
+    func testDoubleNegation() {
+        
+        let value = NSDecimalNumber(string: "-234.0234")
+        let negatedValue = -(-value)
+        
+        XCTAssertEqual(negatedValue, value, "Incorrect")
+    }
 }
