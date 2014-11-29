@@ -22,6 +22,7 @@ class CreationTests: XCTestCase {
         XCTAssertEqual((-8342).decimalNumber, NSDecimalNumber(string: "-8342"), "Incorrect")
     }
     
+/*
     func testCreatingFromIntUsingExponentMethod() {
         XCTAssertEqual(1.e(0), NSDecimalNumber(string: "1e0"), "Incorrect")
         XCTAssertEqual(-1.e(0), NSDecimalNumber(string: "-1e0"), "Incorrect")
@@ -33,6 +34,7 @@ class CreationTests: XCTestCase {
         XCTAssertEqual(-10.e(-2), NSDecimalNumber(string: "-10e-2"), "Incorrect")
         XCTAssertEqual(1.e(20), NSDecimalNumber(string: "1e20"), "Incorrect")
     }
+*/
     
     // MARK: - UInt
     
@@ -41,6 +43,7 @@ class CreationTests: XCTestCase {
         XCTAssertEqual(UInt(23432).decimalNumber, NSDecimalNumber(string: "23432"), "Incorrect")
     }
     
+/*
     func testCreatingFromUIntUsingExponentMethod() {
         XCTAssertEqual(UInt(1).e(0), NSDecimalNumber(string: "1e0"), "Incorrect")
         XCTAssertEqual(UInt(1).e(2), NSDecimalNumber(string: "1e2"), "Incorrect")
@@ -49,6 +52,7 @@ class CreationTests: XCTestCase {
         XCTAssertEqual(UInt(10).e(-2), NSDecimalNumber(string: "10e-2"), "Incorrect")
         XCTAssertEqual(UInt(1).e(20), NSDecimalNumber(string: "1e20"), "Incorrect")
     }
+*/
     
     // MARK: - String
     

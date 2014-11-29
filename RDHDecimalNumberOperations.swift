@@ -299,7 +299,7 @@ public extension Int {
         return NSDecimalNumber(mantissa: mantissa, exponent: 0, isNegative: self < 0)
     }
     
-    public func e(exponent: Int16) -> NSDecimalNumber {
+    private func e(exponent: Int16) -> NSDecimalNumber {
         return self.decimalNumber.decimalNumberByMultiplyingByPowerOf10(exponent)
     }
 }
@@ -310,7 +310,7 @@ public extension UInt {
         return NSDecimalNumber(mantissa: UInt64(self), exponent: 0, isNegative: false)
     }
     
-    public func e(exponent: Int16) -> NSDecimalNumber {
+    private func e(exponent: Int16) -> NSDecimalNumber {
         return self.decimalNumber.decimalNumberByMultiplyingByPowerOf10(exponent)
     }
 }
