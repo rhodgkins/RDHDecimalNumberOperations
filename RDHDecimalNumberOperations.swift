@@ -151,6 +151,15 @@ public func **= (inout left: NSDecimalNumber, right: Int) {
     left = left ** right
 }
 
+// MARK: Overflow
+
+// Match the power operator
+infix operator &** { precedence 155 }
+
+public func &** (left: NSDecimalNumber, right: Int) -> NSDecimalNumber {
+    return left.decimalNumberByRaisingToPower(right, withBehavior: NSDecimalNumberHandler.lenientHandler)
+}
+
 
 // MARK: - Other
 

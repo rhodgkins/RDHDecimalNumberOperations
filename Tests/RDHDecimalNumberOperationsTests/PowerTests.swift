@@ -96,4 +96,11 @@ class PowerTests: XCTestCase {
         
         XCTAssertEqual(result, NSDecimalNumber.one().decimalNumberByRaisingToPower(-1), "Incorrect")
     }
+    
+    // MARK: - Overflow
+    
+    func testOverflow() {
+        
+        XCTAssertEqual(NSDecimalNumber.maximumDecimalNumber() &** 2, NSDecimalNumber.notANumber(), "Incorrect")
+    }
 }
