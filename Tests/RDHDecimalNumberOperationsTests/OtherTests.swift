@@ -67,38 +67,21 @@ class OtherTests: XCTestCase {
     func testSquartRootOfOne() {
         
         XCTAssertEqual(NSDecimalNumber.one().sqrt()!, NSDecimalNumber.one(), "Incorrect")
-        XCTAssertEqual((√NSDecimalNumber.one())!, NSDecimalNumber.one(), "Incorrect")
     }
     
     func testSquartRootOfZero() {
         
         XCTAssertEqual(NSDecimalNumber.zero().sqrt()!, NSDecimalNumber.zero(), "Incorrect")
-        XCTAssertEqual((√NSDecimalNumber.zero())!, NSDecimalNumber.zero(), "Incorrect")
     }
     
     func testSquartRootOfNegativeNumber() {
         
         XCTAssertNil(NSDecimalNumber.minusOne.sqrt(), "Incorrect")
-        XCTAssertNil(√NSDecimalNumber.minusOne, "Incorrect")
     }
     
     func testSquartRootOfNaN() {
         
         XCTAssertEqual(NSDecimalNumber.notANumber().sqrt()!, NSDecimalNumber.notANumber(), "Incorrect")
-        XCTAssertEqual((√NSDecimalNumber.notANumber())!, NSDecimalNumber.notANumber(), "Incorrect")
-    }
-    
-    func testSquareRootInPlace() {
-        
-        let mantinssa: UInt64 = UInt64(arc4random())
-        let exponent: Int16 = Int16(arc4random() % UInt32(Int16.max))
-        let negative = false
-        
-        let value = NSDecimalNumber(mantissa: mantinssa, exponent: exponent, isNegative: negative)
-        let doubleValue = value.doubleValue
-        
-        √value
-        XCTAssertEqualWithAccuracy(value.doubleValue, sqrt(doubleValue), DBL_EPSILON, "Incorrect")
     }
 */
 }

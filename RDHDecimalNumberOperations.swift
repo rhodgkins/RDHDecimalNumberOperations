@@ -109,13 +109,6 @@ public func *= (inout left: NSDecimalNumber, right: NSDecimalNumber) {
     left = left * right
 }
 
-/// Match the * operator
-infix operator × { associativity left precedence 150 }
-
-public func × (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
-    return left * right
-}
-
 // MARK: Overflow
 
 public func &* (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
@@ -131,13 +124,6 @@ public func / (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber
 
 public func /= (inout left: NSDecimalNumber, right: NSDecimalNumber) {
     left = left / right
-}
-
-/// Match the / operator
-infix operator ÷ { associativity left precedence 150 }
-
-public func ÷ (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
-    return left / right
 }
 
 // MARK: Overflow
@@ -167,20 +153,6 @@ public func **= (inout left: NSDecimalNumber, right: Int) {
 
 
 // MARK: - Other
-
-prefix operator √ {}
-
-/// @returns the square root of the decimal number, or nil if value was negative
-private prefix func √ (value: NSDecimalNumber) -> NSDecimalNumber? {
-    return value.sqrt()
-}
-
-/// @returns the square root of the decimal number, or nil if value was negative
-private prefix func √ (inout value: NSDecimalNumber?) {
-    if let v = value {
-        value = √v
-    }
-}
 
 private extension NSDecimalNumberHandler {
     
