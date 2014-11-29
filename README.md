@@ -73,7 +73,7 @@ let numberFromString = "1".decimalValue
 Rounding
 --------
 
-*Note that tests are currenlty (as of 29-Nov-2014) being written for this functionality*
+*Note that tests are currenlty (as of 29-Nov-2014) being written for this functionality. As such it is currently marked as private in the API.*
 
 A rounding method has been added to the `NSRoundingMode` enum:
 ```swift
