@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		4489FA991A29DDEE003CBD6F /* AdditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489FA981A29DDEE003CBD6F /* AdditionTests.swift */; };
 		4489FA9B1A29DE2D003CBD6F /* SubtractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489FA9A1A29DE2D003CBD6F /* SubtractionTests.swift */; };
+		449C7F061A29EF0B009ED081 /* .travis.yml in Resources */ = {isa = PBXBuildFile; fileRef = 449C7F051A29EF0B009ED081 /* .travis.yml */; };
+		449C7F081A29EF3D009ED081 /* RDHDecimalNumberOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 449C7F071A29EF3D009ED081 /* RDHDecimalNumberOperations.swift */; };
 		44C5E42E1A291260008A259C /* RDHDecimalNumberOperations.h in Headers */ = {isa = PBXBuildFile; fileRef = 44C5E42D1A291260008A259C /* RDHDecimalNumberOperations.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		44C5E4341A291260008A259C /* RDHDecimalNumberOperations.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44C5E4281A291260008A259C /* RDHDecimalNumberOperations.framework */; };
 		44C5E43B1A291260008A259C /* OtherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C5E43A1A291260008A259C /* OtherTests.swift */; };
-		44C5E4451A29126A008A259C /* RDHDecimalNumberOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44C5E4441A29126A008A259C /* RDHDecimalNumberOperations.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,13 +29,16 @@
 /* Begin PBXFileReference section */
 		4489FA981A29DDEE003CBD6F /* AdditionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionTests.swift; sourceTree = "<group>"; };
 		4489FA9A1A29DE2D003CBD6F /* SubtractionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtractionTests.swift; sourceTree = "<group>"; };
+		4489FA9C1A29EDFC003CBD6F /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		4489FA9D1A29EDFC003CBD6F /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		449C7F051A29EF0B009ED081 /* .travis.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = .travis.yml; path = ../.travis.yml; sourceTree = "<group>"; };
+		449C7F071A29EF3D009ED081 /* RDHDecimalNumberOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RDHDecimalNumberOperations.swift; path = ../../RDHDecimalNumberOperations.swift; sourceTree = "<group>"; };
 		44C5E4281A291260008A259C /* RDHDecimalNumberOperations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RDHDecimalNumberOperations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C5E42C1A291260008A259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44C5E42D1A291260008A259C /* RDHDecimalNumberOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDHDecimalNumberOperations.h; sourceTree = "<group>"; };
 		44C5E4331A291260008A259C /* RDHDecimalNumberOperationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RDHDecimalNumberOperationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C5E4391A291260008A259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44C5E43A1A291260008A259C /* OtherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTests.swift; sourceTree = "<group>"; };
-		44C5E4441A29126A008A259C /* RDHDecimalNumberOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RDHDecimalNumberOperations.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,9 @@
 		44C5E41E1A291260008A259C = {
 			isa = PBXGroup;
 			children = (
+				449C7F051A29EF0B009ED081 /* .travis.yml */,
+				4489FA9D1A29EDFC003CBD6F /* README.md */,
+				4489FA9C1A29EDFC003CBD6F /* LICENSE */,
 				44C5E42A1A291260008A259C /* RDHDecimalNumberOperations */,
 				44C5E4371A291260008A259C /* RDHDecimalNumberOperationsTests */,
 				44C5E4291A291260008A259C /* Products */,
@@ -78,7 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				44C5E42D1A291260008A259C /* RDHDecimalNumberOperations.h */,
-				44C5E4441A29126A008A259C /* RDHDecimalNumberOperations.swift */,
+				449C7F071A29EF3D009ED081 /* RDHDecimalNumberOperations.swift */,
 				44C5E42B1A291260008A259C /* Supporting Files */,
 			);
 			path = RDHDecimalNumberOperations;
@@ -201,6 +208,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				449C7F061A29EF0B009ED081 /* .travis.yml in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +226,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44C5E4451A29126A008A259C /* RDHDecimalNumberOperations.swift in Sources */,
+				449C7F081A29EF3D009ED081 /* RDHDecimalNumberOperations.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
