@@ -153,7 +153,7 @@ public func ^= (inout left: NSDecimalNumber, right: Int) {
 prefix operator √ {}
 
 /// @returns the square root of the decimal number, or nil if value was negative
-public prefix func √ (value: NSDecimalNumber) -> NSDecimalNumber? {
+private prefix func √ (value: NSDecimalNumber) -> NSDecimalNumber? {
     return value.sqrt()
 }
 
@@ -171,7 +171,7 @@ public extension NSDecimalNumber {
     }
     
     /// @returns the square root of the decimal number, or nil if value was negative
-    public func sqrt() -> NSDecimalNumber? {
+    private func sqrt() -> NSDecimalNumber? {
         
         if (self.isNaN()) {
             return NSDecimalNumber.notANumber()
