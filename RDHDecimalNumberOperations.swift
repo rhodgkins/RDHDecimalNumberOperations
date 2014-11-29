@@ -260,7 +260,8 @@ public extension NSRoundingMode {
     }
 }
 
-infix operator ~ {}
+// Act like cast operator
+infix operator ~ { precedence 132 }
 
 /// @returns the rounded number
 public func ~ (left: NSDecimalNumber, right: NSRoundingMode) -> NSDecimalNumber {
