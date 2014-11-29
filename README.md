@@ -4,8 +4,8 @@ RDHDecimalNumberOperations [![Build Status](https://travis-ci.org/rhodgkins/RDHD
 * **Complete test suite**
 * All basic operators supported
 * Comparison operators
-* **Overflow operators**
-* Creation from `Int` and `String`
+* [**Overflow operators**](#overflow)
+* [Creation](#convenience) from `Int` and `String`
 * `abs()`, `isNaN()` methods added for convenience
 * `minusOne` class `var` added for convenience
 
