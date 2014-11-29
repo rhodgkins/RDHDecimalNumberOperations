@@ -123,14 +123,16 @@ public func ÷ (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumbe
 
 // MARK: - Powers
 
-infix operator ** {}
+/// Give greater precedence than multiplication
+infix operator ** { precedence 155 }
 
 /// Power
 public func ** (left: NSDecimalNumber, right: Int) -> NSDecimalNumber {
     return left.decimalNumberByRaisingToPower(right)
 }
 
-infix operator **= {}
+/// Match all assignment operators
+infix operator **= { associativity right precedence 90 }
 
 /// 2 **= 2 will return 4
 public func **= (inout left: NSDecimalNumber, right: Int) {
