@@ -264,10 +264,6 @@ extension NSRoundingMode {
             return NSDecimalNumberHandler.defaultDecimalNumberHandler().exceptionDuringOperation(operation, error: error, leftOperand: leftOperand, rightOperand: rightOperand)
         }
     }
-    
-    func round(value: NSDecimalNumber) -> NSDecimalNumber {
-        return round(value, scale: NSDecimalNumberHandler.defaultDecimalNumberHandler().scale())
-    }
  
     func round(value: NSDecimalNumber, scale: Int16) -> NSDecimalNumber {
         
@@ -280,12 +276,12 @@ extension NSRoundingMode {
 infix operator ~ { precedence 132 }
 
 /// @returns the rounded number
-func ~ (left: NSDecimalNumber, right: NSRoundingMode) -> NSDecimalNumber {
-    return right.round(left)
+func ~ (left: NSDecimalNumber, right: (roundingMode: NSRoundingMode, scale: Int16)) -> NSDecimalNumber {
+    return right.roundingMode.round(left, scale: right.scale)
 }
 
 /// Rounds the number in place
-func ~= (inout left: NSDecimalNumber, right: NSRoundingMode) {
+func ~= (inout left: NSDecimalNumber, right: (roundingMode: NSRoundingMode, scale: Int16)) {
     left = left ~ right
 }
 
