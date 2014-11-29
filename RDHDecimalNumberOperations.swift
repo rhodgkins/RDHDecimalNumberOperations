@@ -186,7 +186,7 @@ private extension NSDecimalNumberHandler {
     
     class var lenientHandler: NSDecimalNumberHandler {
         struct Lazily {
-            static let handler = NSDecimalNumberHandler(roundingMode: NSDecimalNumberHandler.defaultDecimalNumberHandler().roundingMode(), scale: NSDecimalNumberHandler.defaultDecimalNumberHandler().scale(), raiseOnExactness: true, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false);
+            static let handler = NSDecimalNumberHandler(roundingMode: NSDecimalNumberHandler.defaultDecimalNumberHandler().roundingMode(), scale: NSDecimalNumberHandler.defaultDecimalNumberHandler().scale(), raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false);
         }
         return Lazily.handler
     }
