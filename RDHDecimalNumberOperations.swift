@@ -288,7 +288,8 @@ public func ~= (inout left: NSDecimalNumber, right: NSRoundingMode) {
 public extension Int {
     
     public var decimalNumber: NSDecimalNumber {
-        return NSDecimalNumber(mantissa: UInt64(self), exponent: 0, isNegative: self < 0)
+        let mantissa = UInt64(abs(self))
+        return NSDecimalNumber(mantissa: mantissa, exponent: 0, isNegative: self < 0)
     }
     
     public func e(exponent: Int16) -> NSDecimalNumber {
