@@ -307,3 +307,11 @@ public extension UInt {
         return self.decimalNumber.decimalNumberByMultiplyingByPowerOf10(exponent)
     }
 }
+
+public extension String {
+    
+    /// @warning Uses NSDecimalNumber(string:)
+    public var decimalNumber: NSDecimalNumber {
+        return NSDecimalNumber(string: self)
+    }
+}
