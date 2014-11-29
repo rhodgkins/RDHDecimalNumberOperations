@@ -235,6 +235,18 @@ public extension NSRoundingMode {
     }
 }
 
+infix operator ~ {}
+
+/// @returns the rounded number
+public func ~ (left: NSDecimalNumber, right: NSRoundingMode) -> NSDecimalNumber {
+    return right.round(left)
+}
+
+/// Rounds the number in place
+public func ~= (inout left: NSDecimalNumber, right: NSRoundingMode) {
+    left = left ~ right
+}
+
 
 // MARK: - Creation
 
