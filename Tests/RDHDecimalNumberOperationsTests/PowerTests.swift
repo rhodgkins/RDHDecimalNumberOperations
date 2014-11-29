@@ -45,6 +45,25 @@ class PowerTests: XCTestCase {
         XCTAssertEqual(NSDecimalNumber.minusOne ** -1, NSDecimalNumber.minusOne.decimalNumberByRaisingToPower(-1), "Incorrect")
     }
     
+    func testWithUnaryNegationOperator() {
+        
+        // -3^2 should equal -9 but unary - has higher precedence than exponents (http://en.wikipedia.org/wiki/Order_of_operations#Exceptions_to_the_standard)
+        
+        let three = NSDecimalNumber(string: "3")
+        
+        var value = -three**2
+        XCTAssertEqual(value, NSDecimalNumber(string: "9"), "Incorrect")
+        XCTAssertNotEqual(value, NSDecimalNumber(string: "-9"), "Incorrect")
+
+        value = -(three ** 2)
+        XCTAssertEqual(value, NSDecimalNumber(string: "-9"), "Incorrect")
+        XCTAssertNotEqual(value, NSDecimalNumber(string: "9"), "Incorrect")
+        
+        value = NSDecimalNumber.zero() - three**2
+        XCTAssertEqual(value, NSDecimalNumber(string: "-9"), "Incorrect")
+        XCTAssertNotEqual(value, NSDecimalNumber(string: "9"), "Incorrect")
+    }
+    
     // MARK: - Assignment
     
     func testAssignmentWithPostiveNumbers() {
