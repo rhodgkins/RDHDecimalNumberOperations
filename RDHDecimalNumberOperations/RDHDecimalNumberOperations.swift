@@ -181,6 +181,16 @@ public extension NSDecimalNumber {
             return nil
         }
         
+        // Quickly handle special cases
+        
+        if (self == NSDecimalNumber.zero()) {
+            return NSDecimalNumber.zero()
+        }
+        
+        if (self == NSDecimalNumber.one()) {
+            return NSDecimalNumber.one()
+        }
+        
         struct Lazily {
             static let half = NSDecimalNumber(mantissa: 2, exponent: -1, isNegative: false)
             
