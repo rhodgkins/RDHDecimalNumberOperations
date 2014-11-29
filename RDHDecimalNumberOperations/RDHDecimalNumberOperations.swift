@@ -148,7 +148,7 @@ public func ^= (inout left: NSDecimalNumber, right: Int) {
 }
 
 
-// MARK - Other
+// MARK: - Other
 
 prefix operator √ {}
 
