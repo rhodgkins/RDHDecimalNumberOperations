@@ -176,4 +176,21 @@ class AdditionTests: XCTestCase {
         XCTAssertNotEqual(result, incrementing, "Incorrect")
         XCTAssertEqual(result.decimalNumberByAdding(NSDecimalNumber.one()), incrementing, "Incorrect")
     }
+    
+    // MARK: - Overflow
+    
+    func testOverflow() {
+        let leftNumber = NSDecimalNumber.maximumDecimalNumber()
+        let rightNumber = NSDecimalNumber.maximumDecimalNumber()
+                
+        XCTAssertEqual(leftNumber &+ rightNumber, NSDecimalNumber.notANumber(), "Should not throw an exception and be NaN")
+    }
+    
+    func testLossOfPrecision() {
+        let leftNumber = NSDecimalNumber.maximumDecimalNumber()
+        let rightNumber = NSDecimalNumber.one() / NSDecimalNumber(string: "3")
+        
+        // As adding more significate digits to the end of the biggest number will increase the size of the 38 allowed significate digits
+        XCTAssertEqual(leftNumber &+ rightNumber, leftNumber, "Should not throw an exception and be NaN")
+    }
 }

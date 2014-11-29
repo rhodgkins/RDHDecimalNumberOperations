@@ -141,4 +141,13 @@ class MultiplicationTests: XCTestCase {
         result *= NSDecimalNumber.zero()
         XCTAssertEqual(result, NSDecimalNumber.zero(), "Should be zero")
     }
+    
+    // MARK: - Overflow
+    
+    func testOverflow() {
+        let leftNumber = NSDecimalNumber.maximumDecimalNumber()
+        let rightNumber = NSDecimalNumber.maximumDecimalNumber()
+        
+        XCTAssertEqual(leftNumber &* rightNumber, NSDecimalNumber.notANumber(), "Should not throw an exception and be NaN")
+    }
 }

@@ -211,4 +211,13 @@ class SubtractionTests: XCTestCase {
         
         XCTAssertEqual(negatedValue, value, "Incorrect")
     }
+    
+    // MARK: - Overflow
+    
+    func testOverflow() {
+        let leftNumber = NSDecimalNumber.maximumDecimalNumber()
+        let rightNumber = NSDecimalNumber.minimumDecimalNumber()
+        
+        XCTAssertEqual(leftNumber &- rightNumber, NSDecimalNumber.notANumber(), "Should not throw an exception and be NaN")
+    }
 }
