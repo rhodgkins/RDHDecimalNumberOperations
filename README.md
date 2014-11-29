@@ -6,8 +6,8 @@ RDHDecimalNumberOperations [![Build Status](https://travis-ci.org/rhodgkins/RDHD
 * Comparison operators
 * Overflow operators
 * Creation from `Int` and `String`
-* `abs()`, `isNaN()` methods added for convience
-* `minusOne` class `var` added for convience
+* `abs()`, `isNaN()` methods added for convenience
+* `minusOne` class `var` added for convenience
 
 Coming soon:
 * Rounding operator (present but currently not tested)
@@ -62,9 +62,9 @@ This means the following will *not* throw an exception, instead returning `NSDec
 let notANumber = NSDecimalNumber.one() / NSDecimalNumber.zero()
 ```
 
-Convience
+Convenience
 ---------
-As well as operator support, convience methods for obtaining `NSDecimalNumber`s have been added to `Int`, `UInt` and `String`.
+As well as operator support, convenience methods for obtaining `NSDecimalNumber`s have been added to `Int`, `UInt` and `String`.
 ```swift
 let numberFromInt = 1.decimalValue
 let numberFromString = "1".decimalValue
