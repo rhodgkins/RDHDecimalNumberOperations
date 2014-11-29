@@ -1,3 +1,4 @@
+osx_image: xcode61
 language: objective-c
 xcode_project: Tests/RDHDecimalNumberOperations.xcodeproj
 xcode_scheme: RDHDecimalNumberOperations
