@@ -239,7 +239,7 @@ public extension NSDecimalNumber {
 
 // MARK: - Rounding
 
-extension NSRoundingMode {
+public extension NSRoundingMode {
     
     private class Rounding: NSDecimalNumberBehaviors {
         
@@ -265,7 +265,7 @@ extension NSRoundingMode {
         }
     }
  
-    func round(value: NSDecimalNumber, scale: Int16) -> NSDecimalNumber {
+    public func round(value: NSDecimalNumber, scale: Int16) -> NSDecimalNumber {
         
         let roundingBehaviour = Rounding(roundingMode: self, scale: scale)
         return value.decimalNumberByRoundingAccordingToBehavior(roundingBehaviour)
@@ -276,12 +276,12 @@ extension NSRoundingMode {
 infix operator ~ { precedence 132 }
 
 /// @returns the rounded number
-func ~ (left: NSDecimalNumber, right: (roundingMode: NSRoundingMode, scale: Int16)) -> NSDecimalNumber {
+public func ~ (left: NSDecimalNumber, right: (roundingMode: NSRoundingMode, scale: Int16)) -> NSDecimalNumber {
     return right.roundingMode.round(left, scale: right.scale)
 }
 
 /// Rounds the number in place
-func ~= (inout left: NSDecimalNumber, right: (roundingMode: NSRoundingMode, scale: Int16)) {
+public func ~= (inout left: NSDecimalNumber, right: (roundingMode: NSRoundingMode, scale: Int16)) {
     left = left ~ right
 }
 
