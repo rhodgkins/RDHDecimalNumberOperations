@@ -31,14 +31,14 @@ class RoundingTests: XCTestCase {
     }
     
     func testRoundingAssigmentOperator() {
-        let value = NSDecimalNumber(string: "3.5")
+        let value = NSDecimalNumber(string: "3.7")
         
         var rounded = value
         rounded ~= (NSRoundingMode.RoundUp, 0)
         XCTAssertEqual(rounded, NSDecimalNumber(string: "4"), "Incorrect")
         
         rounded = value
-        rounded ~= (NSRoundingMode.RoundDown, 0)
+        rounded ~= (roundingMode: NSRoundingMode.RoundDown, scale: 0)
         XCTAssertEqual(rounded, NSDecimalNumber(string: "3"), "Incorrect")
     }
 
