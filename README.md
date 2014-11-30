@@ -8,9 +8,7 @@ RDHDecimalNumberOperations [![Build Status](https://travis-ci.org/rhodgkins/RDHD
 * [Creation](#convenience) from `Int` and `String`
 * `abs()`, `isNaN()` methods added for convenience
 * `minusOne` class `var` added for convenience
-
-Coming soon:
-* Rounding operator (present but currently not tested)
+* [Rounding](#rounding) operator
 
 Installation
 -------
@@ -73,15 +71,27 @@ let numberFromString = "1".decimalValue
 Rounding
 --------
 
-*Note that tests are currenlty (as of 29-Nov-2014) being written for this functionality. As such it is currently marked as private in the API.*
-
 A rounding method has been added to the `NSRoundingMode` enum:
 ```swift
 let twoThirds = NSDecimalNumber(string: "2") / NSDecimalNumber(string: "3")
 let roundedNumber = NSRoundingMode.RoundUp.round(twoThirds, scale: 0)
 println("\(twoThirds) rounded up to \(roundedNumber)")
 ```
+Also for even quicker and easier rounding an operator has been added `~`:
+```swift
+let twoThirds = NSDecimalNumber(string: "2") / NSDecimalNumber(string: "3")
+let roundedNumber = twoThirds ~ (roundingMode: NSRoundingMode.RoundUp, scale: 0)
+println("\(twoThirds) rounded up to \(roundedNumber)")
+```
+And for in place rounding:
+```swift
+let twoThirds = NSDecimalNumber(string: "2") / NSDecimalNumber(string: "3")
+var roundedNumber = twoThirds
+roundedNumber ~= (NSRoundingMode.RoundUp, 0)
+println("\(twoThirds) rounded up to \(roundedNumber)")
+```
+
 Output:
 ```
-0.6667 rounded up to 1
+0.6666 rounded up to 1
 ```
