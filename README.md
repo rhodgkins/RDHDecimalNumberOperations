@@ -5,7 +5,7 @@ RDHDecimalNumberOperations [![Build Status](https://travis-ci.org/rhodgkins/RDHD
 * All basic operators supported
 * Comparison operators
 * [**Overflow operators**](#overflow)
-* [Creation](#convenience) from `Int` and `String`
+* [Creation](#convenience) from `String`
 * `abs()`, `isNaN()` methods added for convenience
 * `minusOne` class `var` added for convenience
 * [Rounding](#rounding) operator
@@ -62,10 +62,14 @@ let notANumber = NSDecimalNumber.one() / NSDecimalNumber.zero()
 
 Convenience
 ---------
-As well as operator support, convenience methods for obtaining `NSDecimalNumber`s have been added to `Int`, `UInt` and `String`.
+As well as operator support, a convenience method for obtaining `NSDecimalNumber`s from `String`s has been added.
 ```swift
-let numberFromInt = 1.decimalValue
 let numberFromString = "1".decimalValue
+```
+
+And don't forget you can already utilise `IntegerLiteralConvertible` (inherited from `NSNumber`):
+```swift
+let numberFromInt: NSDecimalNumber = 10
 ```
 
 Rounding
