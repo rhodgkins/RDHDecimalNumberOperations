@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440864C81A46F2F1004900D7 /* EquivalenceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 440864C71A46F2F1004900D7 /* EquivalenceTests.swift */; };
 		447111E51A2B534700231F30 /* RoundingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447111E41A2B534700231F30 /* RoundingTests.swift */; };
 		4489FA991A29DDEE003CBD6F /* AdditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489FA981A29DDEE003CBD6F /* AdditionTests.swift */; };
 		4489FA9B1A29DE2D003CBD6F /* SubtractionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4489FA9A1A29DE2D003CBD6F /* SubtractionTests.swift */; };
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		440864C71A46F2F1004900D7 /* EquivalenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquivalenceTests.swift; sourceTree = "<group>"; };
 		447111E41A2B534700231F30 /* RoundingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundingTests.swift; sourceTree = "<group>"; };
 		4489FA981A29DDEE003CBD6F /* AdditionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionTests.swift; sourceTree = "<group>"; };
 		4489FA9A1A29DE2D003CBD6F /* SubtractionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtractionTests.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 		44C5E4371A291260008A259C /* RDHDecimalNumberOperationsTests */ = {
 			isa = PBXGroup;
 			children = (
+				440864C71A46F2F1004900D7 /* EquivalenceTests.swift */,
 				4489FA981A29DDEE003CBD6F /* AdditionTests.swift */,
 				4489FA9A1A29DE2D003CBD6F /* SubtractionTests.swift */,
 				449C7F091A29F992009ED081 /* MultiplicationTests.swift */,
@@ -257,6 +260,7 @@
 				449C7F0C1A29FE37009ED081 /* DivisionTests.swift in Sources */,
 				449C7F0E1A29FF41009ED081 /* PowerTests.swift in Sources */,
 				447111E51A2B534700231F30 /* RoundingTests.swift in Sources */,
+				440864C81A46F2F1004900D7 /* EquivalenceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
