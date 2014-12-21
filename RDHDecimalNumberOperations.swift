@@ -17,24 +17,8 @@ public func == (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
     return left.isEqualToNumber(right)
 }
 
-public func != (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
-    return !(left == right)
-}
-
-public func > (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
-    return left.compare(right) == NSComparisonResult.OrderedDescending
-}
-
-public func >= (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
-    return (left > right) || (left == right)
-}
-
 public func < (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
     return left.compare(right) == NSComparisonResult.OrderedAscending
-}
-
-public func <= (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
-    return (left < right) || (left == right)
 }
 
 
