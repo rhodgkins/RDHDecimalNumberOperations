@@ -275,29 +275,6 @@ public func ~= (inout left: NSDecimalNumber, right: (roundingMode: NSRoundingMod
 
 // MARK: - Creation
 
-public extension Int {
-    
-    public var decimalNumber: NSDecimalNumber {
-        let mantissa = UInt64(abs(self))
-        return NSDecimalNumber(mantissa: mantissa, exponent: 0, isNegative: self < 0)
-    }
-    
-    private func e(exponent: Int16) -> NSDecimalNumber {
-        return self.decimalNumber.decimalNumberByMultiplyingByPowerOf10(exponent)
-    }
-}
-
-public extension UInt {
-    
-    public var decimalNumber: NSDecimalNumber {
-        return NSDecimalNumber(mantissa: UInt64(self), exponent: 0, isNegative: false)
-    }
-    
-    private func e(exponent: Int16) -> NSDecimalNumber {
-        return self.decimalNumber.decimalNumberByMultiplyingByPowerOf10(exponent)
-    }
-}
-
 public extension String {
     
     /// @warning Uses NSDecimalNumber(string:)
