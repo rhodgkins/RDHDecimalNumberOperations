@@ -10,6 +10,9 @@ import Foundation
 
 // MARK: - Equivalence
 
+extension NSDecimalNumber: Comparable {
+}
+
 public func == (left: NSDecimalNumber, right: NSDecimalNumber) -> Bool {
     return left.isEqualToNumber(right)
 }
