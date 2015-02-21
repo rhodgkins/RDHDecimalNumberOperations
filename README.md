@@ -4,7 +4,7 @@ RDHDecimalNumberOperations
 [![Pod Version](http://img.shields.io/cocoapods/v/RDHDecimalNumberOperations.svg)](http://cocoadocs.org/docsets/RDHDecimalNumberOperations/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/RDHDecimalNumberOperations.svg)](http://cocoadocs.org/docsets/RDHDecimalNumberOperations/)
 [![Pod License](http://img.shields.io/cocoapods/l/RDHDecimalNumberOperations.svg)](http://opensource.org/licenses/MIT)
-[![Dependency Status](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/1.2.0/badge.svg)](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/1.2.0)
+[![Dependency Status](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/1.0.1/badge.svg)](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/1.0.1)
 [![Reference Status](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/reference_badge.svg)](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/references)
 
 * **Complete test suite**
@@ -18,8 +18,13 @@ RDHDecimalNumberOperations
 
 Installation
 -------
-Swift extension for NSDecimalNumber operations.
-Until Cocoapods properly support Swift, just drop [`RDHDecimalNumberOperations.swift`](https://github.com/rhodgkins/RDHDecimalNumberOperations/blob/master/RDHDecimalNumberOperations.swift) into your project.
+
+With cocoapods (using the beta Swift version):
+```ruby
+pod 'RDHDecimalNumberOperations', '1.0.1'
+```
+
+Or, just drop [`RDHDecimalNumberOperations.swift`](https://github.com/rhodgkins/RDHDecimalNumberOperations/blob/master/RDHDecimalNumberOperations.swift) into your project.
 
 Operators
 ---------
