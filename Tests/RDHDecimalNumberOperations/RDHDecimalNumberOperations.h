@@ -6,7 +6,7 @@
 //  Copyright (c) 2014 Rich H. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
 
 //! Project version number for RDHDecimalNumberOperations.
 FOUNDATION_EXPORT double RDHDecimalNumberOperationsVersionNumber;

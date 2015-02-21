@@ -34,6 +34,7 @@
 
 /* Begin PBXFileReference section */
 		440864C71A46F2F1004900D7 /* EquivalenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquivalenceTests.swift; sourceTree = "<group>"; };
+		440D997B1A99428E009E64FF /* RDHDecimalNumberOperations.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; path = RDHDecimalNumberOperations.podspec; sourceTree = "<group>"; };
 		447111E41A2B534700231F30 /* RoundingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundingTests.swift; sourceTree = "<group>"; };
 		4489FA981A29DDEE003CBD6F /* AdditionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionTests.swift; sourceTree = "<group>"; };
 		4489FA9A1A29DE2D003CBD6F /* SubtractionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtractionTests.swift; sourceTree = "<group>"; };
@@ -75,6 +76,7 @@
 		44C5E41E1A291260008A259C = {
 			isa = PBXGroup;
 			children = (
+				440D997B1A99428E009E64FF /* RDHDecimalNumberOperations.podspec */,
 				449C7F051A29EF0B009ED081 /* .travis.yml */,
 				4489FA9D1A29EDFC003CBD6F /* README.md */,
 				4489FA9C1A29EDFC003CBD6F /* LICENSE */,

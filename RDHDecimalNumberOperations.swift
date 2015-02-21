@@ -50,7 +50,7 @@ public postfix func ++ (inout value: NSDecimalNumber) -> NSDecimalNumber {
 // MARK: Overflow
 
 public func &+ (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
-    return left.decimalNumberByAdding(right, withBehavior: NSDecimalNumberHandler.lenientHandler)
+    return left.decimalNumberByAdding(right, withBehavior: LenientDecimalNumberHandler)
 }
 
 
@@ -82,7 +82,7 @@ public postfix func -- (inout value: NSDecimalNumber) -> NSDecimalNumber {
 // MARK: Overflow
 
 public func &- (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
-    return left.decimalNumberBySubtracting(right, withBehavior: NSDecimalNumberHandler.lenientHandler)
+    return left.decimalNumberBySubtracting(right, withBehavior: LenientDecimalNumberHandler)
 }
 
 
@@ -99,7 +99,7 @@ public func *= (inout left: NSDecimalNumber, right: NSDecimalNumber) {
 // MARK: Overflow
 
 public func &* (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
-    return left.decimalNumberByMultiplyingBy(right, withBehavior: NSDecimalNumberHandler.lenientHandler)
+    return left.decimalNumberByMultiplyingBy(right, withBehavior: LenientDecimalNumberHandler)
 }
 
 
@@ -116,7 +116,7 @@ public func /= (inout left: NSDecimalNumber, right: NSDecimalNumber) {
 // MARK: Overflow
 
 public func &/ (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
-    return left.decimalNumberByDividingBy(right, withBehavior: NSDecimalNumberHandler.lenientHandler)
+    return left.decimalNumberByDividingBy(right, withBehavior: LenientDecimalNumberHandler)
 }
 
 
@@ -144,21 +144,13 @@ public func **= (inout left: NSDecimalNumber, right: Int) {
 infix operator &** { precedence 155 }
 
 public func &** (left: NSDecimalNumber, right: Int) -> NSDecimalNumber {
-    return left.decimalNumberByRaisingToPower(right, withBehavior: NSDecimalNumberHandler.lenientHandler)
+    return left.decimalNumberByRaisingToPower(right, withBehavior: LenientDecimalNumberHandler)
 }
 
 
 // MARK: - Other
 
-private extension NSDecimalNumberHandler {
-    
-    class var lenientHandler: NSDecimalNumberHandler {
-        struct Lazily {
-            static let handler = NSDecimalNumberHandler(roundingMode: NSDecimalNumberHandler.defaultDecimalNumberHandler().roundingMode(), scale: NSDecimalNumberHandler.defaultDecimalNumberHandler().scale(), raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false);
-        }
-        return Lazily.handler
-    }
-}
+private let LenientDecimalNumberHandler: NSDecimalNumberBehaviors = NSDecimalNumberHandler(roundingMode: NSDecimalNumberHandler.defaultDecimalNumberHandler().roundingMode(), scale: NSDecimalNumberHandler.defaultDecimalNumberHandler().scale(), raiseOnExactness: false, raiseOnOverflow: false, raiseOnUnderflow: false, raiseOnDivideByZero: false)
 
 public extension NSDecimalNumber {
     
@@ -223,39 +215,17 @@ public extension NSDecimalNumber {
     }
 }
 
-
 // MARK: - Rounding
 
-public extension NSRoundingMode {
+private let VaraibleDecimalNumberHandler: (roundingMode: NSRoundingMode, scale: Int16) -> NSDecimalNumberBehaviors = { (roundingMode, scale) -> NSDecimalNumberHandler in
     
-    private class Rounding: NSDecimalNumberBehaviors {
-        
-        let internalRoundingMode: NSRoundingMode
-        let internalScale = NSDecimalNumberHandler.defaultDecimalNumberHandler().scale()
-        
-        init(roundingMode: NSRoundingMode, scale: Int16) {
-            internalRoundingMode = roundingMode
-            internalScale = scale
-        }
-        
-        func roundingMode() -> NSRoundingMode {
-            return internalRoundingMode
-        }
-        
-        func scale() -> Int16 {
-            return internalScale
-        }
-        
-        func exceptionDuringOperation(operation: Selector, error: NSCalculationError, leftOperand: NSDecimalNumber, rightOperand: NSDecimalNumber) -> NSDecimalNumber? {
-            
-            return NSDecimalNumberHandler.defaultDecimalNumberHandler().exceptionDuringOperation(operation, error: error, leftOperand: leftOperand, rightOperand: rightOperand)
-        }
-    }
+    return NSDecimalNumberHandler(roundingMode: roundingMode, scale: scale, raiseOnExactness: false, raiseOnOverflow: true, raiseOnUnderflow: true, raiseOnDivideByZero: true)
+}
+
+public extension NSRoundingMode {
  
     public func round(value: NSDecimalNumber, scale: Int16) -> NSDecimalNumber {
-        
-        let roundingBehaviour = Rounding(roundingMode: self, scale: scale)
-        return value.decimalNumberByRoundingAccordingToBehavior(roundingBehaviour)
+        return value.decimalNumberByRoundingAccordingToBehavior(VaraibleDecimalNumberHandler(roundingMode: self, scale: scale))
     }
 }
 
