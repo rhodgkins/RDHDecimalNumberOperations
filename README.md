@@ -1,5 +1,11 @@
-RDHDecimalNumberOperations [![Build Status](https://travis-ci.org/rhodgkins/RDHDecimalNumberOperations.svg)](https://travis-ci.org/rhodgkins/RDHDecimalNumberOperations)
+RDHDecimalNumberOperations 
 ==========================
+[![Build Status](https://travis-ci.org/rhodgkins/RDHDecimalNumberOperations.svg?branch=master)](https://travis-ci.org/rhodgkins/RDHDecimalNumberOperations)
+[![Pod Version](http://img.shields.io/cocoapods/v/RDHDecimalNumberOperations.svg)](http://cocoadocs.org/docsets/RDHDecimalNumberOperations/)
+[![Pod Platform](http://img.shields.io/cocoapods/p/RDHDecimalNumberOperations.svg)](http://cocoadocs.org/docsets/RDHDecimalNumberOperations/)
+[![Pod License](http://img.shields.io/cocoapods/l/RDHDecimalNumberOperations.svg)](http://opensource.org/licenses/MIT)
+[![Dependency Status](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/1.2.0/badge.svg)](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/1.2.0)
+[![Reference Status](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/reference_badge.svg)](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/references)
 
 * **Complete test suite**
 * All basic operators supported
