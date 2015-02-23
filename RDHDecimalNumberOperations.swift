@@ -113,12 +113,6 @@ public func /= (inout left: NSDecimalNumber, right: NSDecimalNumber) {
     left = left / right
 }
 
-// MARK: Overflow
-
-public func &/ (left: NSDecimalNumber, right: NSDecimalNumber) -> NSDecimalNumber {
-    return left.decimalNumberByDividingBy(right, withBehavior: LenientDecimalNumberHandler)
-}
-
 
 // MARK: - Powers
 

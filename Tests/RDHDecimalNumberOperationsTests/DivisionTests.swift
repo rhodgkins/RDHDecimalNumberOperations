@@ -127,20 +127,4 @@ class DivisionTests: XCTestCase {
         result /= NSDecimalNumber.one()
         XCTAssertEqual(result, result, "Should not change")
     }
-    
-    // MARK: - Overflow
-    
-    func testDividingByZero() {
-        let leftNumber = NSDecimalNumber.one()
-        let rightNumber = NSDecimalNumber.zero()
-        
-        XCTAssertEqual(leftNumber &/ rightNumber, NSDecimalNumber.notANumber(), "Should not throw an exception and be NaN")
-    }
-    
-    func testUnderflow() {
-        let leftNumber = NSDecimalNumber.one()
-        let rightNumber = NSDecimalNumber.maximumDecimalNumber()
-        
-        XCTAssertEqual(leftNumber &/ rightNumber, NSDecimalNumber.notANumber(), "Should not throw an exception and be NaN")
-    }
 }
