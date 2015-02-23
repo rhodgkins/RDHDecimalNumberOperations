@@ -178,41 +178,6 @@ public extension NSDecimalNumber {
             return -self
         }
     }
-    
-    /// @returns the square root of the decimal number, or nil if value was negative
-    private func sqrt() -> NSDecimalNumber? {
-        
-        if (self.isNaN()) {
-            return NSDecimalNumber.notANumber()
-        }
-        
-        if (self < NSDecimalNumber.zero()) {
-            return nil
-        }
-        
-        // Quickly handle special cases
-        
-        if (self == NSDecimalNumber.zero()) {
-            return NSDecimalNumber.zero()
-        }
-        
-        if (self == NSDecimalNumber.one()) {
-            return NSDecimalNumber.one()
-        }
-        
-        struct Lazily {
-            static let half = NSDecimalNumber(mantissa: 2, exponent: -1, isNegative: false)
-        }
-        
-        var guess = (self + NSDecimalNumber.one()) * Lazily.half
-        
-        for _ in 1...6 {
-            // Use overflow division
-            guess = ((self &/ guess) + guess) * Lazily.half
-        }
-        
-        return guess
-    }
 }
 
 // MARK: - Rounding
