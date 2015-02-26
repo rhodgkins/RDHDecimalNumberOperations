@@ -14,5 +14,6 @@ Pod::Spec.new do |s|
     s.requires_arc = true
     
     s.ios.deployment_target = '8.0'
+    s.osx.deployment_target = '10.9'
     s.source_files = 'RDHDecimalNumberOperations.swift'
 end
