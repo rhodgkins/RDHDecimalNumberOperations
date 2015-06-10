@@ -34,7 +34,7 @@ class EquivalenceTests: XCTestCase {
         let unsortedNumbers: [NSDecimalNumber] = [5, 4, 3, 2, 1, 0]
         let expectedSortedNumbers: [NSDecimalNumber] = [0, 1, 2, 3, 4, 5]
         
-        let sortedNumbers = sorted(unsortedNumbers)
+        let sortedNumbers = unsortedNumbers.sort()
         
         XCTAssertEqual(sortedNumbers, expectedSortedNumbers, "Numbers are not correctly sorted")
     }
@@ -43,7 +43,7 @@ class EquivalenceTests: XCTestCase {
         let unsortedNumbers: [NSDecimalNumber] = [0, -1, -2, -3, -4, -5]
         let expectedSortedNumbers: [NSDecimalNumber] = [-5, -4, -3, -2, -1, 0]
         
-        let sortedNumbers = sorted(unsortedNumbers)
+        let sortedNumbers = unsortedNumbers.sort()
         
         XCTAssertEqual(sortedNumbers, expectedSortedNumbers, "Numbers are not correctly sorted")
     }
@@ -52,7 +52,7 @@ class EquivalenceTests: XCTestCase {
         let unsortedNumbers: [NSDecimalNumber] = [5, 4, 3, 2, 1, 0, -1, -2, -3, -4, -5]
         let expectedSortedNumbers: [NSDecimalNumber] = [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
         
-        let sortedNumbers = sorted(unsortedNumbers)
+        let sortedNumbers = unsortedNumbers.sort()
         
         XCTAssertEqual(sortedNumbers, expectedSortedNumbers, "Numbers are not correctly sorted")
     }
@@ -61,7 +61,7 @@ class EquivalenceTests: XCTestCase {
         let unsortedNumbers: [NSDecimalNumber] = [0, 5, 4, 3, 2, 1, 5]
         let expectedSortedNumbers: [NSDecimalNumber] = [0, 1, 2, 3, 4, 5, 5]
         
-        let sortedNumbers = sorted(unsortedNumbers)
+        let sortedNumbers = unsortedNumbers.sort()
         
         XCTAssertEqual(sortedNumbers, expectedSortedNumbers, "Numbers are not correctly sorted")
     }
