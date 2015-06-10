@@ -133,7 +133,7 @@ class AdditionTests: XCTestCase {
         
         let value = NSDecimalNumber(string: "34")
         var incrementing = value
-        var result = ++incrementing
+        let result = ++incrementing
         
         XCTAssertEqual(incrementing, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         XCTAssertEqual(result, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
@@ -144,7 +144,7 @@ class AdditionTests: XCTestCase {
         
         let value = NSDecimalNumber(string: "-383")
         var incrementing = value
-        var result = ++incrementing
+        let result = ++incrementing
         
         XCTAssertEqual(incrementing, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         XCTAssertEqual(result, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
@@ -157,7 +157,7 @@ class AdditionTests: XCTestCase {
         
         let value = NSDecimalNumber(string: "234")
         var incrementing = value
-        var result = incrementing++
+        let result = incrementing++
         
         XCTAssertEqual(incrementing, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         XCTAssertEqual(result, value, "Incorrect")
@@ -169,7 +169,7 @@ class AdditionTests: XCTestCase {
         
         let value = NSDecimalNumber(string: "-4358")
         var incrementing = value
-        var result = incrementing++
+        let result = incrementing++
         
         XCTAssertEqual(incrementing, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         XCTAssertEqual(result, value, "Incorrect")
