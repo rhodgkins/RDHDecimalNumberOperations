@@ -4,8 +4,7 @@ RDHDecimalNumberOperations
 [![Pod Version](http://img.shields.io/cocoapods/v/RDHDecimalNumberOperations.svg)](http://cocoadocs.org/docsets/RDHDecimalNumberOperations/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/RDHDecimalNumberOperations.svg)](http://cocoadocs.org/docsets/RDHDecimalNumberOperations/)
 [![Pod License](http://img.shields.io/cocoapods/l/RDHDecimalNumberOperations.svg)](http://opensource.org/licenses/MIT)
-[![Dependency Status](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/1.0.1/badge.svg)](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/1.0.1)
-[![Reference Status](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/reference_badge.svg)](https://www.versioneye.com/objective-c/RDHDecimalNumberOperations/references)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 * **Complete test suite**
 * All basic operators supported
