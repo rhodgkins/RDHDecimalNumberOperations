@@ -7,7 +7,6 @@ Pod::Spec.new do |s|
     s.homepage = 'https://github.com/rhodgkins/RDHDecimalNumberOperations.git'
     s.author = 'Rich Hodgkins'
     s.source = { :git => 'https://github.com/rhodgkins/RDHDecimalNumberOperations.git', :tag => s.version.to_s }
-    s.docset_url = 'http://cocoadocs.org/docsets/RDHDecimalNumberOperations.git/xcode-docset.atom'
     s.social_media_url = 'https://twitter.com/rhodgkins'
     
     s.frameworks = 'Foundation'
