@@ -35,6 +35,10 @@
 /* Begin PBXFileReference section */
 		440864C71A46F2F1004900D7 /* EquivalenceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EquivalenceTests.swift; sourceTree = "<group>"; };
 		440D997B1A99428E009E64FF /* RDHDecimalNumberOperations.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; name = RDHDecimalNumberOperations.podspec; path = ../RDHDecimalNumberOperations.podspec; sourceTree = "<group>"; };
+		446C8D651BA754FB00FFB0E3 /* RDHDecimalNumberOperations.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = RDHDecimalNumberOperations.xcconfig; sourceTree = "<group>"; };
+		446C8D741BA7589900FFB0E3 /* Info-iOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-iOS.plist"; sourceTree = "<group>"; };
+		446C8D751BA7589900FFB0E3 /* Info-OSX.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-OSX.plist"; sourceTree = "<group>"; };
+		446C8D761BA7589900FFB0E3 /* Info-watchOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-watchOS.plist"; sourceTree = "<group>"; };
 		447111E41A2B534700231F30 /* RoundingTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundingTests.swift; sourceTree = "<group>"; };
 		4489FA981A29DDEE003CBD6F /* AdditionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AdditionTests.swift; sourceTree = "<group>"; };
 		4489FA9A1A29DE2D003CBD6F /* SubtractionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubtractionTests.swift; sourceTree = "<group>"; };
@@ -47,7 +51,6 @@
 		449C7F0D1A29FF41009ED081 /* PowerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PowerTests.swift; sourceTree = "<group>"; };
 		449C7F0F1A2A0958009ED081 /* CreationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreationTests.swift; sourceTree = "<group>"; };
 		44C5E4281A291260008A259C /* RDHDecimalNumberOperations.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RDHDecimalNumberOperations.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		44C5E42C1A291260008A259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44C5E42D1A291260008A259C /* RDHDecimalNumberOperations.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RDHDecimalNumberOperations.h; sourceTree = "<group>"; };
 		44C5E4331A291260008A259C /* RDHDecimalNumberOperationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RDHDecimalNumberOperationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C5E4391A291260008A259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -73,6 +76,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		446C8D731BA7589900FFB0E3 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				446C8D741BA7589900FFB0E3 /* Info-iOS.plist */,
+				446C8D751BA7589900FFB0E3 /* Info-OSX.plist */,
+				446C8D761BA7589900FFB0E3 /* Info-watchOS.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		44C5E41E1A291260008A259C = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +93,7 @@
 				449C7F051A29EF0B009ED081 /* .travis.yml */,
 				4489FA9D1A29EDFC003CBD6F /* README.md */,
 				4489FA9C1A29EDFC003CBD6F /* LICENSE */,
+				446C8D651BA754FB00FFB0E3 /* RDHDecimalNumberOperations.xcconfig */,
 				44C5E42A1A291260008A259C /* RDHDecimalNumberOperations */,
 				44C5E4371A291260008A259C /* RDHDecimalNumberOperationsTests */,
 				44C5E4291A291260008A259C /* Products */,
@@ -100,17 +114,9 @@
 			children = (
 				44C5E42D1A291260008A259C /* RDHDecimalNumberOperations.h */,
 				449C7F071A29EF3D009ED081 /* RDHDecimalNumberOperations.swift */,
-				44C5E42B1A291260008A259C /* Supporting Files */,
+				446C8D731BA7589900FFB0E3 /* SupportingFiles */,
 			);
 			path = RDHDecimalNumberOperations;
-			sourceTree = "<group>";
-		};
-		44C5E42B1A291260008A259C /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				44C5E42C1A291260008A259C /* Info.plist */,
-			);
-			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		44C5E4371A291260008A259C /* RDHDecimalNumberOperationsTests */ = {
@@ -280,6 +286,7 @@
 /* Begin XCBuildConfiguration section */
 		44C5E43C1A291260008A259C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 446C8D651BA754FB00FFB0E3 /* RDHDecimalNumberOperations.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -295,9 +302,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -314,12 +321,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
@@ -327,6 +331,7 @@
 		};
 		44C5E43D1A291260008A259C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 446C8D651BA754FB00FFB0E3 /* RDHDecimalNumberOperations.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -342,9 +347,9 @@
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -354,10 +359,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -372,11 +374,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RDHDecimalNumberOperations/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.objc.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -390,11 +388,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = RDHDecimalNumberOperations/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.objc.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -402,32 +396,24 @@
 		44C5E4421A291260008A259C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = RDHDecimalNumberOperationsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.objc.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = $PRODUCT_NAME/Info.plist;
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(inherited)Tests";
 			};
 			name = Debug;
 		};
 		44C5E4431A291260008A259C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = RDHDecimalNumberOperationsTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "uk.co.rhodgkins.objc.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				APPLICATION_EXTENSION_API_ONLY = NO;
+				INFOPLIST_FILE = $PRODUCT_NAME/Info.plist;
+				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_NAME = "$(inherited)Tests";
 			};
 			name = Release;
 		};
