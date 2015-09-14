@@ -177,6 +177,40 @@ class AdditionTests: XCTestCase {
         XCTAssertEqual(result.decimalNumberByAdding(NSDecimalNumber.one()), incrementing, "Incorrect")
     }
     
+    // MARK: - Unary positive
+    
+    func testNegationWithPositiveNumbers() {
+        
+        let value = NSDecimalNumber(string: "9351.3214")
+        let positiveValue = +value
+        
+        XCTAssertEqual(positiveValue, value, "Incorrect")
+    }
+    
+    func testNegationWithNegativeNumbers() {
+        
+        let value = NSDecimalNumber(string: "-234.0234")
+        let positiveValue = +value
+        
+        XCTAssertEqual(positiveValue, value, "Incorrect")
+    }
+    
+    func testNegationWithZero() {
+        
+        let value = NSDecimalNumber.zero()
+        let positiveValue = +value
+        
+        XCTAssertEqual(positiveValue, value, "Incorrect")
+    }
+    
+    func testDoubleNegation() {
+        
+        let value = NSDecimalNumber(string: "-234.0234")
+        let positiveValue = +(+value)
+        
+        XCTAssertEqual(positiveValue, value, "Incorrect")
+    }
+    
     // MARK: - Overflow
     
     func testOverflow() {
