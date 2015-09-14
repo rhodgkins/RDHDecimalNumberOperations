@@ -20,8 +20,10 @@ Installation
 
 With cocoapods (using the beta Swift version):
 ```ruby
-pod 'RDHDecimalNumberOperations', '1.0.1'
+pod 'RDHDecimalNumberOperations', '2.0.0'
 ```
+
+Carthage is also supported.
 
 Or, just drop [`RDHDecimalNumberOperations.swift`](https://github.com/rhodgkins/RDHDecimalNumberOperations/blob/master/RDHDecimalNumberOperations.swift) into your project.
 
