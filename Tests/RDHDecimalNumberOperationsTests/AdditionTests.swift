@@ -133,7 +133,7 @@ class AdditionTests: XCTestCase {
         
         let value = NSDecimalNumber(string: "34")
         var incrementing = value
-        var result = ++incrementing
+        let result = ++incrementing
         
         XCTAssertEqual(incrementing, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         XCTAssertEqual(result, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
@@ -144,7 +144,7 @@ class AdditionTests: XCTestCase {
         
         let value = NSDecimalNumber(string: "-383")
         var incrementing = value
-        var result = ++incrementing
+        let result = ++incrementing
         
         XCTAssertEqual(incrementing, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         XCTAssertEqual(result, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
@@ -157,7 +157,7 @@ class AdditionTests: XCTestCase {
         
         let value = NSDecimalNumber(string: "234")
         var incrementing = value
-        var result = incrementing++
+        let result = incrementing++
         
         XCTAssertEqual(incrementing, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         XCTAssertEqual(result, value, "Incorrect")
@@ -169,12 +169,46 @@ class AdditionTests: XCTestCase {
         
         let value = NSDecimalNumber(string: "-4358")
         var incrementing = value
-        var result = incrementing++
+        let result = incrementing++
         
         XCTAssertEqual(incrementing, value.decimalNumberByAdding(NSDecimalNumber.one()), "Incorrect")
         XCTAssertEqual(result, value, "Incorrect")
         XCTAssertNotEqual(result, incrementing, "Incorrect")
         XCTAssertEqual(result.decimalNumberByAdding(NSDecimalNumber.one()), incrementing, "Incorrect")
+    }
+    
+    // MARK: - Unary positive
+    
+    func testNegationWithPositiveNumbers() {
+        
+        let value = NSDecimalNumber(string: "9351.3214")
+        let positiveValue = +value
+        
+        XCTAssertEqual(positiveValue, value, "Incorrect")
+    }
+    
+    func testNegationWithNegativeNumbers() {
+        
+        let value = NSDecimalNumber(string: "-234.0234")
+        let positiveValue = +value
+        
+        XCTAssertEqual(positiveValue, value, "Incorrect")
+    }
+    
+    func testNegationWithZero() {
+        
+        let value = NSDecimalNumber.zero()
+        let positiveValue = +value
+        
+        XCTAssertEqual(positiveValue, value, "Incorrect")
+    }
+    
+    func testDoubleNegation() {
+        
+        let value = NSDecimalNumber(string: "-234.0234")
+        let positiveValue = +(+value)
+        
+        XCTAssertEqual(positiveValue, value, "Incorrect")
     }
     
     // MARK: - Overflow
