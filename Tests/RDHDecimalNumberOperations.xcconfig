@@ -10,7 +10,7 @@
 
 PRODUCT_NAME                            = RDHDecimalNumberOperations
 PRODUCT_BUNDLE_IDENTIFIER               = uk.co.rhodgkins.swift.$(PRODUCT_NAME:rfc1034identifier)
-DNO_VERSION                             = 2.0.0
+DNO_VERSION                             = 2.0.1
 
 // Universal Framework
 APPLICATION_EXTENSION_API_ONLY          = YES
