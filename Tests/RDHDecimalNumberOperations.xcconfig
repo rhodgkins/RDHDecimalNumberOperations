@@ -16,7 +16,7 @@ DNO_VERSION                             = 2.0.0
 APPLICATION_EXTENSION_API_ONLY          = YES
 COMBINE_HIDPI_IMAGES                    = YES
 
-SUPPORTED_PLATFORMS                     = macosx iphoneos iphonesimulator watchos watchsimulaor
+SUPPORTED_PLATFORMS                     = macosx iphoneos iphonesimulator watchos watchsimulator
 
 VALID_ARCHS[sdk=iphone*]                = arm64 armv7 armv7s
 VALID_ARCHS[sdk=macosx*]                = i386 x86_64
