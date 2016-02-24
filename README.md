@@ -1,10 +1,10 @@
 RDHDecimalNumberOperations 
 ==========================
 [![Build Status](https://travis-ci.org/rhodgkins/RDHDecimalNumberOperations.svg?branch=master)](https://travis-ci.org/rhodgkins/RDHDecimalNumberOperations)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Pod Version](http://img.shields.io/cocoapods/v/RDHDecimalNumberOperations.svg)](http://cocoadocs.org/docsets/RDHDecimalNumberOperations/)
 [![Pod Platform](http://img.shields.io/cocoapods/p/RDHDecimalNumberOperations.svg)](http://cocoadocs.org/docsets/RDHDecimalNumberOperations/)
 [![Pod License](http://img.shields.io/cocoapods/l/RDHDecimalNumberOperations.svg)](http://opensource.org/licenses/MIT)
-[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 
 * **Complete test suite**
 * All basic operators supported
@@ -18,12 +18,16 @@ RDHDecimalNumberOperations
 Installation
 -------
 
-With cocoapods (using the beta Swift version):
-```ruby
-pod 'RDHDecimalNumberOperations', '2.0.0'
+With Carthage:
+
+```ogdl
+github "rhodgkins/RDHDecimalNumberOperations" ~> 2.0
 ```
 
-Carthage is also supported.
+With CocoaPods:
+```ruby
+pod 'RDHDecimalNumberOperations', '~> 2.0.0'
+```
 
 Or, just drop [`RDHDecimalNumberOperations.swift`](https://github.com/rhodgkins/RDHDecimalNumberOperations/blob/master/RDHDecimalNumberOperations.swift) into your project.
 
