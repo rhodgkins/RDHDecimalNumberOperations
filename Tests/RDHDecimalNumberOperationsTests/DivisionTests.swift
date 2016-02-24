@@ -7,9 +7,19 @@
 //
 
 import Foundation
-import XCTest
 
+#if os(watchOS)
+// No testing supported
+@testable import RDHDecimalNumberOperations
+#else
+    
+import XCTest
+    
+#if DEBUG
+@testable import RDHDecimalNumberOperations
+#else
 import RDHDecimalNumberOperations
+#endif
 
 class DivisionTests: XCTestCase {
     
@@ -128,3 +138,5 @@ class DivisionTests: XCTestCase {
         XCTAssertEqual(result, result, "Should not change")
     }
 }
+
+#endif

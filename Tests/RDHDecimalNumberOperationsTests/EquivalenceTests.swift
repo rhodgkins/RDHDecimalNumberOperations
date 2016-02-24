@@ -7,9 +7,19 @@
 //
 
 import Foundation
-import XCTest
 
+#if os(watchOS)
+// No testing supported
+@testable import RDHDecimalNumberOperations
+#else
+    
+import XCTest
+    
+#if DEBUG
+@testable import RDHDecimalNumberOperations
+#else
 import RDHDecimalNumberOperations
+#endif
 
 class EquivalenceTests: XCTestCase {
 
@@ -66,3 +76,5 @@ class EquivalenceTests: XCTestCase {
         XCTAssertEqual(sortedNumbers, expectedSortedNumbers, "Numbers are not correctly sorted")
     }
 }
+
+#endif

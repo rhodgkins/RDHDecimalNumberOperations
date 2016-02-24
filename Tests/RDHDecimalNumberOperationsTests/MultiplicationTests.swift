@@ -7,9 +7,19 @@
 //
 
 import Foundation
-import XCTest
 
+#if os(watchOS)
+// No testing supported
+@testable import RDHDecimalNumberOperations
+#else
+    
+import XCTest
+    
+#if DEBUG
+@testable import RDHDecimalNumberOperations
+#else
 import RDHDecimalNumberOperations
+#endif
 
 class MultiplicationTests: XCTestCase {
     
@@ -151,3 +161,5 @@ class MultiplicationTests: XCTestCase {
         XCTAssertEqual(leftNumber &* rightNumber, NSDecimalNumber.notANumber(), "Should not throw an exception and be NaN")
     }
 }
+
+#endif

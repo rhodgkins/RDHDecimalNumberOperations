@@ -55,6 +55,7 @@
 		44C5E4331A291260008A259C /* RDHDecimalNumberOperationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RDHDecimalNumberOperationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		44C5E4391A291260008A259C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		44C5E43A1A291260008A259C /* OtherTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherTests.swift; sourceTree = "<group>"; };
+		44F92B2F1C7E42D600A0AD0A /* Info-tvOS.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Info-tvOS.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +81,7 @@
 			isa = PBXGroup;
 			children = (
 				446C8D741BA7589900FFB0E3 /* Info-iOS.plist */,
+				44F92B2F1C7E42D600A0AD0A /* Info-tvOS.plist */,
 				446C8D751BA7589900FFB0E3 /* Info-OSX.plist */,
 				446C8D761BA7589900FFB0E3 /* Info-watchOS.plist */,
 			);

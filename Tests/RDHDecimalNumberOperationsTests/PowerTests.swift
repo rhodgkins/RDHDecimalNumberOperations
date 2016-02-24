@@ -7,9 +7,20 @@
 //
 
 import Foundation
-import XCTest
+import Foundation
 
+#if os(watchOS)
+// No testing supported
+@testable import RDHDecimalNumberOperations
+#else
+    
+import XCTest
+    
+#if DEBUG
+@testable import RDHDecimalNumberOperations
+#else
 import RDHDecimalNumberOperations
+#endif
 
 class PowerTests: XCTestCase {
     
@@ -104,3 +115,5 @@ class PowerTests: XCTestCase {
         XCTAssertEqual(NSDecimalNumber.maximumDecimalNumber() &** 2, NSDecimalNumber.notANumber(), "Incorrect")
     }
 }
+
+#endif
